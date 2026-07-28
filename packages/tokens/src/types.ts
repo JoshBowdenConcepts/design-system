@@ -10,7 +10,7 @@
  * CSS `light-dark()` function, so the system scales beyond two modes.
  */
 
-export type TokenCategory = "color" | "space";
+export type TokenCategory = "color" | "space" | "font";
 
 export const COLOR_MODES = ["light", "dark"] as const;
 export type ColorMode = (typeof COLOR_MODES)[number];
@@ -47,7 +47,39 @@ export interface SemanticGroup {
   tokens: SemanticTokens;
 }
 
-export type TokenGroup = PrimitiveGroup | SemanticGroup;
+/**
+ * Instruction for loading a web font from Google Fonts. Consumed by the
+ * generator to build a single `@import` at the top of the CSS. Omit this for
+ * system-only stacks (nothing is fetched over the network for those).
+ */
+export interface GoogleFontSpec {
+  /** Family name as Google Fonts knows it, e.g. "Manrope" or "JetBrains Mono". */
+  family: string;
+  /**
+   * The css2 axes tail appended after the family, e.g. "wght@400;500;600;700".
+   * Leave undefined to load the family's default (regular 400) face only.
+   */
+  axes?: string;
+}
+
+export interface FontFamilyToken {
+  /** Full CSS font stack, including system fallbacks. */
+  stack: string;
+  /** Google Fonts loading spec; omit for system-only stacks. */
+  google?: GoogleFontSpec;
+}
+
+export type FontFamilyTokens = Record<string, FontFamilyToken>;
+
+export interface FontFamilyGroup {
+  /** CSS variable prefix, e.g. "font-family" -> --font-family-*. */
+  name: string;
+  category: "font";
+  kind: "font";
+  tokens: FontFamilyTokens;
+}
+
+export type TokenGroup = PrimitiveGroup | SemanticGroup | FontFamilyGroup;
 
 export function definePrimitives(
   name: string,
@@ -70,4 +102,11 @@ export function defineSemantic(
   tokens: SemanticTokens,
 ): SemanticGroup {
   return { name, category, kind: "semantic", tokens };
+}
+
+export function defineFontFamily(
+  name: string,
+  tokens: FontFamilyTokens,
+): FontFamilyGroup {
+  return { name, category: "font", kind: "font", tokens };
 }
