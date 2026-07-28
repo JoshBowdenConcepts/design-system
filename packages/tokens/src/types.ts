@@ -10,7 +10,7 @@
  * CSS `light-dark()` function, so the system scales beyond two modes.
  */
 
-export type TokenCategory = "color";
+export type TokenCategory = "color" | "space";
 
 export const COLOR_MODES = ["light", "dark"] as const;
 export type ColorMode = (typeof COLOR_MODES)[number];
@@ -31,6 +31,12 @@ export interface PrimitiveGroup {
   name: string;
   category: TokenCategory;
   kind: "primitive";
+  /**
+   * Internal primitives are used only to resolve semantic aliases; they are NOT
+   * emitted as public CSS variables nor exported from the package. The palette
+   * is internal — consume colors via semantic tokens instead.
+   */
+  internal: boolean;
   tokens: PrimitiveTokens;
 }
 
@@ -47,8 +53,15 @@ export function definePrimitives(
   name: string,
   category: TokenCategory,
   tokens: PrimitiveTokens,
+  options: { internal?: boolean } = {},
 ): PrimitiveGroup {
-  return { name, category, kind: "primitive", tokens };
+  return {
+    name,
+    category,
+    kind: "primitive",
+    internal: options.internal ?? false,
+    tokens,
+  };
 }
 
 export function defineSemantic(

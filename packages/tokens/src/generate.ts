@@ -10,6 +10,9 @@
  * so consumers switch modes by toggling `data-color-mode` on a root element.
  * `color-scheme` is kept in sync for native UI (form controls, scrollbars).
  *
+ * Internal primitive groups (the palette) are not emitted as CSS variables;
+ * semantic aliases are resolved to their raw values inline.
+ *
  * (Breakpoint/feature variants and iOS Swift output come in later phases.)
  */
 import { mkdir, writeFile } from "node:fs/promises";
@@ -66,8 +69,13 @@ function resolveRef(prefix: string, ref: string): string {
   return value;
 }
 
+/** Groups exposed publicly (palette primitives are internal-only). */
+const publicGroups = groups.filter(
+  (g) => !(g.kind === "primitive" && g.internal),
+);
+
 function buildManifest(): TokenManifest {
-  const manifestGroups: TokenManifestGroup[] = groups.map((group) => {
+  const manifestGroups: TokenManifestGroup[] = publicGroups.map((group) => {
     let tokens: TokenManifestEntry[];
     if (group.kind === "primitive") {
       tokens = Object.entries(group.tokens).map(([key, value]) => {
@@ -117,19 +125,25 @@ function colorSchemeFor(mode: ColorMode): string | null {
   return mode === "light" || mode === "dark" ? mode : null;
 }
 
+/** Public (non-internal) primitive declarations, e.g. the spacing scale. */
 function primitiveDecls(): string[] {
-  return primitiveGroups.flatMap((group) =>
-    Object.entries(group.tokens).map(([key, value]) =>
-      decl(cssVarName(group.name, key), value),
-    ),
-  );
+  return primitiveGroups
+    .filter((group) => !group.internal)
+    .flatMap((group) =>
+      Object.entries(group.tokens).map(([key, value]) =>
+        decl(cssVarName(group.name, key), value),
+      ),
+    );
 }
 
-/** Semantic declarations resolved for a single mode (aliases -> var refs). */
+/**
+ * Semantic declarations resolved for a single mode. Aliases resolve to their
+ * raw primitive values inline (the internal palette is not emitted as vars).
+ */
 function semanticDecls(mode: ColorMode): string[] {
   return semanticGroups.flatMap((group) =>
     Object.entries(group.tokens).map(([key, modeMap]) =>
-      decl(cssVarName(group.name, key), `var(${cssVarName(group.name, modeMap[mode])})`),
+      decl(cssVarName(group.name, key), resolveRef(group.name, modeMap[mode])),
     ),
   );
 }

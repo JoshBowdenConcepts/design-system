@@ -9,24 +9,6 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const Palette: Story = {
-  render: () => {
-    const group = getGroup("color", "primitive");
-    return (
-      <Section
-        title="Palette"
-        description="Raw color scales — the primitive values of the design system. These do not change between modes."
-      >
-        <Grid>
-          {group.tokens.map((t) => (
-            <ColorSwatch key={t.key} token={t} />
-          ))}
-        </Grid>
-      </Section>
-    );
-  },
-};
-
 export const Semantic: Story = {
   render: () => {
     const group = getGroup("color", "semantic");
