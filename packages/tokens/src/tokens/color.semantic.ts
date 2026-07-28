@@ -26,8 +26,11 @@ export const semanticColor = defineSemantic("color", "color", {
   "accent-default": { light: "brand-500", dark: "brand-400" },
   "accent-hover": { light: "brand-600", dark: "brand-300" },
 
-  // Status
-  "success-default": { light: "success-500", dark: "success-500" },
-  "warning-default": { light: "warning-500", dark: "warning-500" },
-  "danger-default": { light: "danger-500", dark: "danger-500" },
+  // Status (lighter shades in dark mode for contrast on dark surfaces)
+  "success-default": { light: "success-500", dark: "success-400" },
+  "success-hover": { light: "success-600", dark: "success-300" },
+  "warning-default": { light: "warning-500", dark: "warning-400" },
+  "warning-hover": { light: "warning-600", dark: "warning-300" },
+  "danger-default": { light: "danger-500", dark: "danger-400" },
+  "danger-hover": { light: "danger-600", dark: "danger-300" },
 });

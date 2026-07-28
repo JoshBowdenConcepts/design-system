@@ -71,6 +71,45 @@ const monoStyle: React.CSSProperties = {
   color: "var(--color-text-secondary)",
 };
 
+export function SpaceRow({ token }: { token: TokenManifestEntry }) {
+  if (token.kind !== "primitive") return null;
+  const rem = parseFloat(token.value);
+  const px = Math.round(rem * 16 * 1000) / 1000;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "1rem",
+        padding: "0.5rem 0.75rem",
+        border: "1px solid var(--color-border-default)",
+        borderRadius: "0.5rem",
+        background: "var(--color-bg-surface-raised)",
+      }}
+    >
+      <code
+        style={{ ...monoStyle, width: 56, color: "var(--color-text-primary)" }}
+      >
+        {token.key}
+      </code>
+      <code style={{ ...monoStyle, width: 132 }}>
+        {token.value} · {px}px
+      </code>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div
+          style={{
+            height: 16,
+            width: token.cssRef,
+            minWidth: 1,
+            background: "var(--color-accent-default)",
+            borderRadius: "var(--space-25)",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
 export function ColorSwatch({ token }: { token: TokenManifestEntry }) {
   return (
     <div style={cardStyle}>
