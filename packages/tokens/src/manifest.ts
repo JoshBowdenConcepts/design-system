@@ -1,4 +1,4 @@
-import type { ColorMode, TokenCategory } from "./types";
+import type { ColorMode, GoogleFontSpec, TokenCategory } from "./types";
 
 /**
  * Serializable description of the token set. Emitted as `manifest.json` by the
@@ -26,12 +26,26 @@ export interface SemanticManifestEntry {
   modes: Record<ColorMode, { ref: string; value: string }>;
 }
 
-export type TokenManifestEntry = PrimitiveManifestEntry | SemanticManifestEntry;
+export interface FontFamilyManifestEntry {
+  kind: "font";
+  key: string;
+  cssVar: string;
+  cssRef: string;
+  /** Full CSS font stack, including fallbacks. */
+  stack: string;
+  /** Present when the family is fetched from Google Fonts. */
+  google?: GoogleFontSpec;
+}
+
+export type TokenManifestEntry =
+  | PrimitiveManifestEntry
+  | SemanticManifestEntry
+  | FontFamilyManifestEntry;
 
 export interface TokenManifestGroup {
   name: string;
   category: TokenCategory;
-  kind: "primitive" | "semantic";
+  kind: "primitive" | "semantic" | "font";
   tokens: TokenManifestEntry[];
 }
 

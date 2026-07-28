@@ -110,6 +110,53 @@ export function SpaceRow({ token }: { token: TokenManifestEntry }) {
   );
 }
 
+export function FontFamilySpecimen({ token }: { token: TokenManifestEntry }) {
+  if (token.kind !== "font") return null;
+  return (
+    <div style={{ ...cardStyle, background: "var(--color-bg-surface)" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          justifyContent: "space-between",
+          gap: "1rem",
+          padding: "0.75rem 1rem",
+          borderBottom: "1px solid var(--color-border-default)",
+        }}
+      >
+        <code style={{ ...monoStyle, color: "var(--color-text-primary)" }}>
+          {token.cssVar}
+        </code>
+        <span style={monoStyle}>
+          {token.google ? `Google · ${token.google.family}` : "System"}
+        </span>
+      </div>
+      <div style={{ padding: "1.25rem 1rem", display: "grid", gap: "0.75rem" }}>
+        <div
+          style={{
+            fontFamily: token.cssRef,
+            fontSize: "2rem",
+            lineHeight: 1.15,
+            color: "var(--color-text-primary)",
+          }}
+        >
+          The quick brown fox jumps
+        </div>
+        <div
+          style={{
+            fontFamily: token.cssRef,
+            fontSize: "1rem",
+            color: "var(--color-text-secondary)",
+          }}
+        >
+          ABCDEFGHIJKLM abcdefghijklm 0123456789 — $ &amp; @ # %
+        </div>
+        <code style={{ ...monoStyle, whiteSpace: "normal" }}>{token.stack}</code>
+      </div>
+    </div>
+  );
+}
+
 export function ColorSwatch({ token }: { token: TokenManifestEntry }) {
   return (
     <div style={cardStyle}>
