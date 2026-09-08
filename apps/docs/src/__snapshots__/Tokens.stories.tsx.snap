@@ -1,36 +1,350 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tokens/Placeholder AllTokens smoke-test 1`] = `
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left; padding-right: 2rem;">
-        Token
-      </th>
-      <th style="text-align: left; padding-right: 2rem;">
-        Source value
-      </th>
-      <th style="text-align: left;">
-        CSS custom property
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding-right: 2rem;">
+exports[`Tokens AllCategories smoke-test 1`] = `
+<div>
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font: 600 1.125rem / 1.4 system-ui, sans-serif; margin: 0px 0px 0.5rem;">
+      type
+    </h2>
+    <table style="border-collapse: collapse; width: 100%; color: rgb(24, 24, 27);">
+      <thead>
+        <tr>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Token
+          </th>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Base value
+          </th>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Reference
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              type.body
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            normal normal 400 1rem/1.5 system-ui, sans-serif
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-type-body)
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              type.heading
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            normal normal 700 1.5rem/1.25 system-ui, sans-serif
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-type-heading)
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font: 600 1.125rem / 1.4 system-ui, sans-serif; margin: 0px 0px 0.5rem;">
+      space
+    </h2>
+    <table style="border-collapse: collapse; width: 100%; color: rgb(24, 24, 27);">
+      <thead>
+        <tr>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Token
+          </th>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Base value
+          </th>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Reference
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              space.sm
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            0.5rem
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-space-sm)
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              space.md
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            1rem
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-space-md)
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              space.lg
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            2rem
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-space-lg)
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section style="margin-bottom: 2rem;">
+    <h2 style="font: 600 1.125rem / 1.4 system-ui, sans-serif; margin: 0px 0px 0.5rem;">
+      color
+    </h2>
+    <table style="border-collapse: collapse; width: 100%; color: rgb(24, 24, 27);">
+      <thead>
+        <tr>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Token
+          </th>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Base value
+          </th>
+          <th scope="col"
+              style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+          >
+            Reference
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              color.bg
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            #ffffff
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-color-bg)
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              color.fg
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            #111111
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-color-fg)
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              color.accent
+            </code>
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            #3b82f6
+          </td>
+          <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+            <code>
+              var(--ds-color-accent)
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+`;
+
+exports[`Tokens Overrides smoke-test 1`] = `
+<div style="font: 400 0.9375rem / 1.5 system-ui, sans-serif; color: rgb(24, 24, 27);">
+  <fieldset style="border: 1px solid rgb(212, 212, 216); margin-bottom: 1rem; padding: 0.75rem;">
+    <legend>
+      Active conditions
+    </legend>
+    <label style="margin-right: 1.5rem;">
+      <input type="checkbox">
+      <code>
+        [data-theme="dark"]
+      </code>
+    </label>
+    <label>
+      <input type="checkbox">
+      <code>
+        .ds-scope-compact
+      </code>
+    </label>
+  </fieldset>
+  <div style="background: var(--ds-color-bg); color: var(--ds-color-fg); padding: var(--ds-space-md); border: 1px solid rgb(212, 212, 216);">
+    <p style="font: var(--ds-type-body); margin: 0px;">
+      The quick brown fox jumps over the lazy dog. This paragraph uses
+      <code>
+        font: var(--ds-type-body)
+      </code>
+      — one declaration for the whole type style.
+    </p>
+  </div>
+  <dl style="margin-top: 1rem;">
+    <div>
+      <dt style="font: 600 0.875rem / 1.4 system-ui, sans-serif; float: left; clear: left; margin-right: 0.5rem;">
+        Resolved
         <code>
-          placeholder
+          --ds-type-body
         </code>
-      </td>
-      <td style="padding-right: 2rem;">
-        0
-      </td>
-      <td>
+      </dt>
+      <dd style="font: 400 0.875rem / 1.4 monospace; margin: 0px 0px 0.25rem;">
+        normal normal 400 1.125rem/1.5 system-ui, sans-serif
+      </dd>
+    </div>
+    <div>
+      <dt style="font: 600 0.875rem / 1.4 system-ui, sans-serif; float: left; clear: left; margin-right: 0.5rem;">
+        Resolved
         <code>
-          var(--ds-placeholder)
+          --ds-space-md
         </code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      </dt>
+      <dd style="font: 400 0.875rem / 1.4 monospace; margin: 0px 0px 0.25rem;">
+        1.5rem
+      </dd>
+    </div>
+    <div>
+      <dt style="font: 600 0.875rem / 1.4 system-ui, sans-serif; float: left; clear: left; margin-right: 0.5rem;">
+        Resolved
+        <code>
+          --ds-color-bg
+        </code>
+      </dt>
+      <dd style="font: 400 0.875rem / 1.4 monospace; margin: 0px 0px 0.25rem;">
+        #f4f4f5
+      </dd>
+    </div>
+  </dl>
+  <h3 style="font: 600 1rem / 1.4 system-ui, sans-serif;">
+    Authored rules for
+    <code>
+      type.body
+    </code>
+  </h3>
+  <table style="border-collapse: collapse; color: rgb(24, 24, 27);">
+    <thead>
+      <tr>
+        <th scope="col"
+            style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+        >
+          Condition
+        </th>
+        <th scope="col"
+            style="text-align: left; padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 2px solid rgb(24, 24, 27); font: 600 0.875rem / 1.4 system-ui, sans-serif;"
+        >
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          <code>
+            (base)
+          </code>
+        </td>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          normal normal 400 1rem/1.5 system-ui, sans-serif
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          <code>
+            dark
+          </code>
+        </td>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          normal normal 400 1rem/1.6 system-ui, sans-serif
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          <code>
+            768$
+          </code>
+        </td>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          normal normal 400 1.125rem/1.5 system-ui, sans-serif
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          <code>
+            .compact
+          </code>
+        </td>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          normal normal 400 0.875rem/1.4 system-ui, sans-serif
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          <code>
+            dark + .compact
+          </code>
+        </td>
+        <td style="padding: 0.25rem 1rem 0.25rem 0px; border-bottom: 1px solid rgb(212, 212, 216); font: 400 0.875rem / 1.4 system-ui, sans-serif; vertical-align: top;">
+          normal normal 400 0.9375rem/1.5 system-ui, sans-serif
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;

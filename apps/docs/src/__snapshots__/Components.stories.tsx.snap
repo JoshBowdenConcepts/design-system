@@ -2,7 +2,7 @@
 
 exports[`Components/Placeholder Default smoke-test 1`] = `
 <div data-ds-placeholder
-     style="padding: var(--ds-placeholder);"
+     style="padding: var(--ds-space-sm);"
 >
   <svg viewbox="0 0 24 24"
        fill="currentColor"
