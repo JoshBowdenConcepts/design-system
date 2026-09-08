@@ -1,0 +1,35 @@
+{
+  "name": "design-system",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "concurrently -k -n turbo,storybook -c blue,magenta \"turbo watch build\" \"pnpm --filter docs storybook\"",
+    "test": "turbo run test && vitest run --project scripts",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "check:deps": "node scripts/check-deps.mjs",
+    "agent:claude": "specify integration use claude",
+    "agent:cursor": "specify integration use cursor-agent",
+    "agent:status": "specify integration status",
+    "toggle": "node scripts/toggle-agent.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.17.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^2.1.8"
+  }
+}

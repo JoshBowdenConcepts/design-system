@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tokens/Placeholder AllTokens smoke-test 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left; padding-right: 2rem;">
+        Token
+      </th>
+      <th style="text-align: left; padding-right: 2rem;">
+        Source value
+      </th>
+      <th style="text-align: left;">
+        CSS custom property
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding-right: 2rem;">
+        <code>
+          placeholder
+        </code>
+      </td>
+      <td style="padding-right: 2rem;">
+        0
+      </td>
+      <td>
+        <code>
+          var(--ds-placeholder)
+        </code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

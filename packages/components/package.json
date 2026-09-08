@@ -1,0 +1,32 @@
+{
+  "name": "@design-system/components",
+  "version": "0.0.0",
+  "description": "Design system components — React components built on tokens and icons.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/web/index.d.ts",
+      "import": "./dist/web/index.js"
+    }
+  },
+  "types": "./dist/web/index.d.ts",
+  "files": ["dist/web", "dist/ios"],
+  "scripts": {
+    "build": "tsx src/generate.ts && tsc -p tsconfig.build.json",
+    "generate": "tsx src/generate.ts",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@design-system/icons": "workspace:*",
+    "@design-system/tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

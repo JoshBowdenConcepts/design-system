@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm build
+
+      - run: pnpm test
+
+      - name: Dependency direction check
+        run: node scripts/check-deps.mjs
+
+      - run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build Storybook
+        run: pnpm --filter docs build-storybook
+
+      - name: Install Playwright browser
+        run: pnpm --filter docs exec playwright install --with-deps chromium
+
+      - name: Accessibility + visual-regression gate
+        run: |
+          pnpm --filter docs exec concurrently -k -s first -n sb,test \
+            "http-server storybook-static --port 6006 --silent" \
+            "wait-on tcp:127.0.0.1:6006 && test-storybook --url http://127.0.0.1:6006 --ci"

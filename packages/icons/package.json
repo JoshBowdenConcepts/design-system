@@ -1,0 +1,30 @@
+{
+  "name": "@design-system/icons",
+  "version": "0.0.0",
+  "description": "Design system icons — generated React components from SVG source.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/web/index.d.ts",
+      "import": "./dist/web/index.js"
+    }
+  },
+  "types": "./dist/web/index.d.ts",
+  "files": ["dist/web", "dist/ios"],
+  "scripts": {
+    "build": "tsx src/generate.ts",
+    "generate": "tsx src/generate.ts",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@design-system/tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

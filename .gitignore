@@ -3,6 +3,21 @@ dist/
 storybook-static/
 .turbo/
 *.tsbuildinfo
+coverage/
 .DS_Store
+Thumbs.db
+*.log
 npm-debug.log*
 pnpm-debug.log*
+.env
+.env.*
+
+# Swift / SwiftPM
+.build/
+DerivedData/
+*.xcodeproj/xcuserdata/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/

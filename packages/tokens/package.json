@@ -1,0 +1,26 @@
+{
+  "name": "@design-system/tokens",
+  "version": "0.0.0",
+  "description": "Design system tokens — source of truth for every visual decision.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/web/index.d.ts",
+      "import": "./dist/web/index.js"
+    },
+    "./tokens.css": "./dist/web/tokens.css"
+  },
+  "types": "./dist/web/index.d.ts",
+  "files": ["dist/web", "dist/ios"],
+  "sideEffects": ["*.css"],
+  "scripts": {
+    "build": "tsx src/generate.ts && tsc -p tsconfig.build.json",
+    "generate": "tsx src/generate.ts",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
