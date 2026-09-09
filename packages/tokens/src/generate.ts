@@ -15,6 +15,7 @@
 import { mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { fontImports } from "./fonts.js";
 import { resolveTokens } from "./resolve.js";
 import { tokens } from "./tokens/index.js";
 import type { ConditionSet, Tokens } from "./types.js";
@@ -68,7 +69,9 @@ function wrapperFor(c: ConditionSet): Wrapper {
 
 export function renderCss(tokenSet: Tokens): string {
   const rules = resolveTokens(tokenSet);
-  const lines: string[] = [HEADER];
+  // `@import` must precede every rule (only a comment may come before it), so
+  // the font imports sit directly under the header.
+  const lines: string[] = [HEADER, ...fontImports];
 
   if (rules.length === 0) {
     lines.push(":root {}");

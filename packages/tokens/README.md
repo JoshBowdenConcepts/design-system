@@ -6,15 +6,17 @@ data structure, and iOS Swift.
 
 ## Authoring
 
-One category per file under `src/tokens/` (`type.ts`, `space.ts`, `color.ts`, …),
-assembled by `src/tokens/index.ts` into a single set keyed `<category>.<name>`
-(→ CSS var `--ds-<category>-<name>`).
+One category per file under `src/tokens/` — `type.ts`, `space.ts`, `radius.ts`,
+`layout.ts`, `color.ts` — assembled by `src/tokens/index.ts` into a single set
+keyed `<category>.<name>` (→ CSS var `--ds-<category>-<name>`). Scale steps are
+numbered in hundreds (`space.200`, `radius.300`); colour and layout tokens use
+semantic names (`color.text-primary`, `layout.gutter`).
 
 Each token has one **base `value`** and optional **`overrides`**:
 
 ```ts
-export const space: Tokens = {
-  md: {
+export const layout: Tokens = {
+  gutter: {
     value: "1rem",
     overrides: {
       dark: "1rem",                    // colour mode
@@ -24,6 +26,23 @@ export const space: Tokens = {
     },
   },
 };
+```
+
+A token can combine all three axes in one path. This example applies the final
+value only in dark mode, at 768px and above, inside the compact scope:
+
+```ts
+bg: {
+  value: ref("neutral.50"),
+  overrides: {
+    dark: {
+      value: ref("neutral.950"),
+      "768$": {
+        ".compact": ref("neutral.900"),
+      },
+    },
+  },
+}
 ```
 
 Override key markers:
@@ -45,18 +64,26 @@ parts), purely through the CSS cascade.
 whole style:
 
 ```ts
-body: { value: "normal normal 400 1rem/1.5 system-ui, sans-serif" }
+p: { value: "normal normal 400 1rem/1.625 'Public Sans', sans-serif" }
 ```
 ```css
-p { font: var(--ds-type-body); }
+p { font: var(--ds-type-p); }
 ```
+
+The three families the `type` tokens name (Bricolage Grotesque, Public Sans, IBM
+Plex Mono) are loaded by an `@import` at the top of `tokens.css` — see
+`src/fonts.ts`. Importing `@design-system/tokens/tokens.css` is all a consumer
+needs; no separate `<link>`. Letter-spacing and text-transform aren't part of
+the `font` shorthand and are deferred to a later pass.
 
 ### Colour
 
-`src/palette.ts` holds a **private** colour ramp. Semantic colour tokens
-reference palette entries by key; the build resolves them to literal colours.
-The palette is never emitted to CSS and never exported — only semantic
-`--ds-color-<role>` tokens are public.
+`src/palette.ts` holds a **private** colour ramp (`emerald` / `neutral` full
+ramps, plus the two steps each `blue` / `amber` / `red` status role needs).
+Semantic colour tokens reference palette entries by key; the build resolves them
+to literal colours. The base `value` is the light-mode colour and each `dark`
+override the dark-mode colour. The palette is never emitted to CSS and never
+exported — only semantic `--ds-color-<role>` tokens are public.
 
 ## Consuming
 
@@ -64,12 +91,12 @@ The palette is never emitted to CSS and never exported — only semantic
 import { tokens, resolvedTokens } from "@design-system/tokens";
 import "@design-system/tokens/tokens.css";
 
-tokens["type.body"].value;                          // authored base value
+tokens["type.p"].value;                              // authored base value
 resolvedTokens.filter((r) => r.name === "color.bg"); // every finalized value + condition-set
 ```
 
 ```css
-.card { background: var(--ds-color-bg); color: var(--ds-color-fg); }
+.card { background: var(--ds-color-bg-raised); color: var(--ds-color-text-primary); }
 ```
 
 ## Contracts

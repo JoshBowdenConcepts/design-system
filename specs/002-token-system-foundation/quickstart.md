@@ -86,7 +86,7 @@ and the **Overrides** story. In that story:
 ```ts
 import { tokens, resolvedTokens } from "@design-system/tokens";
 
-tokens["type.body"].value;                    // authored base (a font shorthand)
+tokens["type.p"].value;                        // authored base (a font shorthand)
 resolvedTokens.filter(r => r.name === "color.bg");   // finalized literal colours + condition-sets
 // `palette` is NOT importable — semantic names only
 ```

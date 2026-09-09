@@ -1,6 +1,8 @@
 import { resolvePaletteRef } from "../palette.js";
 import type { OverrideNode, Token, Tokens } from "../types.js";
 import { color } from "./color.js";
+import { layout } from "./layout.js";
+import { radius } from "./radius.js";
 import { space } from "./space.js";
 import { type } from "./type.js";
 
@@ -15,6 +17,8 @@ export const breakpoints = { sm: 640, md: 768, lg: 1024 } as const;
 const CATEGORIES: ReadonlyArray<readonly [string, Tokens]> = [
   ["type", type],
   ["space", space],
+  ["radius", radius],
+  ["layout", layout],
   ["color", color],
 ];
 

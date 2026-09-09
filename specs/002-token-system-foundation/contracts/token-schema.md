@@ -58,10 +58,11 @@ three grammars → error `unrecognised override key`.
 
 ```ts
 export const palette = {
+  "emerald.600": "#04724d",
   "neutral.0": "#ffffff",
-  "neutral.900": "#111111",
-  "blue.500": "#3b82f6",
-  // … placeholder ramp this phase
+  "neutral.950": "#0b1210",
+  "blue.500": "#0b57d0",
+  // … emerald + neutral full ramps; two steps each for blue / amber / red
 } as const;
 export type PaletteRef = keyof typeof palette;
 export function resolvePaletteRef(ref: string, tokenName: string): string;
@@ -73,13 +74,15 @@ export function resolvePaletteRef(ref: string, tokenName: string): string;
   `resolvePaletteRef` during assembly → literal colours before any `ResolvedRule`.
 - `palette` never appears in `dist/web/tokens.css`, `dist/web/index.d.ts`,
   `resolvedTokens`, or Swift output.
-- This applies to the `color` category only; `type` / `space` author literals.
+- This applies to the `color` category only; `type` / `space` / `radius` /
+  `layout` author literals.
 
 ## Category assembly
 
 - Each file in `src/tokens/` exports a `Tokens` record with **un-prefixed** keys.
-- `src/tokens/index.ts` imports them in a fixed order and namespaces:
-  final name = `<category>.<key>` → CSS var `--ds-<category>-<key>`.
+- `src/tokens/index.ts` imports them in a fixed order — `type`, `space`,
+  `radius`, `layout`, `color` — and namespaces: final name = `<category>.<key>`
+  → CSS var `--ds-<category>-<key>`.
 - The `color` category's leaves are palette-resolved during assembly (above).
 - Category list and breakpoint reference map are exported from `index.ts`:
   ```ts
