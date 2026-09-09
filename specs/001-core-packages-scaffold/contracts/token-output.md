@@ -6,6 +6,15 @@ gitignored (FR: never hand-edited).
 
 ## tokens — web output
 
+> **Superseded for the tokens package by
+> [`specs/002-token-system-foundation/contracts/css-output.md`](../../002-token-system-foundation/contracts/css-output.md).**
+> Feature 002 replaced the flat scaffold shape below with nested,
+> specificity-ordered blocks, renamed the class-name axis `feature` → `scope`
+> (`.ds-feature-*` → `.ds-scope-*`), and added a private colour palette resolved
+> at build time. The `index.js` / `index.d.ts` / iOS Swift shapes here still hold
+> (Swift identifiers are now camel-cased). This section is kept for historical
+> context.
+
 ### `dist/web/tokens.css` (FR-006a)
 
 CSS custom properties only. Structure:
@@ -27,8 +36,8 @@ CSS custom properties only. Structure:
   :root { /* overrides */ }
 }
 
-/* feature axis */
-.ds-feature-example {
+/* class-name scope axis (002: renamed from "feature") */
+.ds-scope-example {
   /* overrides */
 }
 ```

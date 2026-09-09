@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components/Placeholder Default smoke-test 1`] = `
-<div data-ds-placeholder
-     style="padding: var(--ds-placeholder);"
->
-  <svg viewbox="0 0 24 24"
-       fill="currentColor"
-       width="1em"
-       height="1em"
-       aria-hidden="true"
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div data-ds-placeholder
+       style="padding: var(--ds-space-100);"
   >
-    <path d="M4 4h16v16H4z">
-    </path>
-  </svg>
+    <svg viewbox="0 0 24 24"
+         fill="currentColor"
+         width="1em"
+         height="1em"
+         aria-hidden="true"
+    >
+      <path d="M4 4h16v16H4z">
+      </path>
+    </svg>
+  </div>
 </div>
 `;

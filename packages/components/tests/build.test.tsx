@@ -7,9 +7,9 @@ import { Placeholder } from "../src/Placeholder.js";
 import { renderSwift } from "../src/generate.js";
 
 describe("Placeholder component", () => {
-  it("renders and consumes the --ds-placeholder token, not a hardcoded value", () => {
+  it("renders and consumes a --ds-* token, not a hardcoded value", () => {
     const html = renderToStaticMarkup(createElement(Placeholder));
-    expect(html).toContain("var(--ds-placeholder)");
+    expect(html).toContain("var(--ds-space-100)");
     expect(html).toContain("<svg"); // pulls in @design-system/icons
   });
 

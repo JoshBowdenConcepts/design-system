@@ -1,36 +1,986 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tokens/Placeholder AllTokens smoke-test 1`] = `
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left; padding-right: 2rem;">
-        Token
-      </th>
-      <th style="text-align: left; padding-right: 2rem;">
-        Source value
-      </th>
-      <th style="text-align: left;">
-        CSS custom property
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding-right: 2rem;">
-        <code>
-          placeholder
+exports[`Tokens Colors smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="max-width: var(--ds-layout-max-width);">
+    <h1 style="font: var(--ds-type-h1); margin: 0px 0px 0.5rem;">
+      Colour
+    </h1>
+    <p style="font: var(--ds-type-p); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0 0 var(--ds-space-600);">
+      Semantic roles only — the numbered emerald / neutral ramps live in the private palette. Base value is the light-mode colour; every role also carries a dark value. Flip the Theme switch to compare.
+    </p>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Surfaces
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-bg); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              bg
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-bg)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #fbfcfc · dark #0b1210
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-bg-raised); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              bg-raised
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-bg-raised)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #ffffff · dark #141f1a
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-bg-sunken); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              bg-sunken
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-bg-sunken)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #f1f5f3 · dark #070c0a
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Text
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-text-primary); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              text-primary
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-text-primary)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #101815 · dark #eff6f3
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-text-secondary); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              text-secondary
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-text-secondary)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #384540 · dark #b9c7c2
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-text-tertiary); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              text-tertiary
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-text-tertiary)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #6e7b76 · dark #869590
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Borders
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-border); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              border
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-border)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #e3eae7 · dark #223029
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-border-strong); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              border-strong
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-border-strong)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #9aa6a1 · dark #46554e
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Primary
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-primary); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              primary
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-primary)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #04724d · dark #55e39b
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-primary-hover); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              primary-hover
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-primary-hover)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #045c3f · dark #7de7b4
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-primary-subtle); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              primary-subtle
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-primary-subtle)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #dbf6e7 · dark #15291f
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-on-primary); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              on-primary
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-on-primary)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #ffffff · dark #06140d
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-focus-ring); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              focus-ring
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-focus-ring)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #17a96d · dark #7de7b4
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Status
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-success); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              success
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-success)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #04724d · dark #55e39b
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-info); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              info
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-info)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #0b57d0 · dark #8fb4ff
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-warning); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              warning
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-warning)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #8a5200 · dark #f1be5a
+            </div>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0px;">
+          <div style="height: 72px; border-radius: var(--ds-radius-300); background: var(--ds-color-danger); border: 1px solid var(--ds-color-border);">
+          </div>
+          <figcaption style="margin-top: var(--ds-space-100);">
+            <div style="font: var(--ds-type-label);">
+              danger
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              var(--ds-color-danger)
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              light #b3261e · dark #ff9e96
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Pairings
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+        <div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-300); padding: var(--ds-space-300); font: var(--ds-type-h4);">
+          Body text
+          <div style="font: var(--ds-type-overline); margin-top: var(--ds-space-50);">
+            text-primary on bg
+          </div>
+        </div>
+        <div style="background: var(--ds-color-bg-raised); color: var(--ds-color-text-secondary); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-300); padding: var(--ds-space-300); font: var(--ds-type-h4);">
+          Secondary text
+          <div style="font: var(--ds-type-overline); margin-top: var(--ds-space-50);">
+            text-secondary on bg-raised
+          </div>
+        </div>
+        <div style="background: var(--ds-color-primary); color: var(--ds-color-on-primary); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-300); padding: var(--ds-space-300); font: var(--ds-type-h4);">
+          Primary button
+          <div style="font: var(--ds-type-overline); margin-top: var(--ds-space-50);">
+            on-primary on primary
+          </div>
+        </div>
+        <div style="background: var(--ds-color-primary-subtle); color: var(--ds-color-primary); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-300); padding: var(--ds-space-300); font: var(--ds-type-h4);">
+          Selected row
+          <div style="font: var(--ds-type-overline); margin-top: var(--ds-space-50);">
+            primary on primary-subtle
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Tokens Layout smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="max-width: var(--ds-layout-max-width);">
+    <h1 style="font: var(--ds-type-h1); margin: 0px 0px 0.5rem;">
+      Layout
+    </h1>
+    <p style="font: var(--ds-type-p); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0 0 var(--ds-space-600);">
+      Structural values that aren't spacing steps. layout.gutter is the one responsive token — resize the window to watch it step up at 768 and 1024.
+    </p>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        Values
+      </h2>
+      <table style="border-collapse: collapse; width: 100%;">
+        <thead>
+          <tr>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-300) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Token
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-300) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Base
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-300) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Overrides
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-300) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Reference
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                layout.gutter
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              1rem
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              768$ → 1.5rem, 1024$ → 2rem
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                var(--ds-layout-gutter)
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                layout.max-width
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              75rem
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              —
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                var(--ds-layout-max-width)
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                layout.measure
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              68ch
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              —
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                var(--ds-layout-measure)
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                layout.touch-min
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              44px
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              —
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                var(--ds-layout-touch-min)
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                layout.focus-ring-width
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              3px
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              —
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                var(--ds-layout-focus-ring-width)
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                layout.focus-ring-offset
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              2px
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              —
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                var(--ds-layout-focus-ring-offset)
+              </code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        gutter
+      </h2>
+      <div style="border: 1px dashed var(--ds-color-border-strong); padding: var(--ds-layout-gutter); border-radius: var(--ds-radius-300);">
+        <div style="background: var(--ds-color-primary-subtle); border: 1px solid var(--ds-color-primary); border-radius: var(--ds-radius-200); padding: var(--ds-space-200); font: var(--ds-type-p-sm);">
+          This box is inset by
+          <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            var(--ds-layout-gutter)
+          </code>
+          .
+        </div>
+      </div>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        measure
+      </h2>
+      <p style="font: var(--ds-type-p); max-width: var(--ds-layout-measure); margin: 0px;">
+        Body copy is capped at
+        <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          var(--ds-layout-measure)
         </code>
-      </td>
-      <td style="padding-right: 2rem;">
-        0
-      </td>
-      <td>
-        <code>
-          var(--ds-placeholder)
-        </code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        so line length stays readable. This paragraph is exactly that wide — around 68 characters per line, the upper end of comfortable reading.
+      </p>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Tokens Overrides smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="max-width: var(--ds-layout-max-width);">
+    <h1 style="font: var(--ds-type-h1); margin: 0px 0px 0.5rem;">
+      Override resolution
+    </h1>
+    <p style="font: var(--ds-type-p); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0 0 var(--ds-space-600);">
+      A token's base value plus its axis-marked overrides flatten to one rule per condition-set, ordered by specificity. The cascade — not any runtime code — picks the winner. resolvedTokens exposes the same data to non-CSS consumers.
+    </p>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        color.bg
+      </h2>
+      <table style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Condition
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Value
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Specificity
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                (base)
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              #fbfcfc
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              0
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                dark
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              #0b1210
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              1
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        color.primary
+      </h2>
+      <table style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Condition
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Value
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Specificity
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                (base)
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              #04724d
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              0
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                dark
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              #55e39b
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              1
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section style="margin-bottom: var(--ds-space-800);">
+      <h2 style="font: var(--ds-type-h3); margin: 0 0 var(--ds-space-300); padding-bottom: var(--ds-space-100); border-bottom: 1px solid var(--ds-color-border);">
+        layout.gutter
+      </h2>
+      <table style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Condition
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Value
+            </th>
+            <th scope="col"
+                style="text-align: left; font: var(--ds-type-label); padding: 0 var(--ds-space-400) var(--ds-space-100) 0; border-bottom: 2px solid var(--ds-color-border-strong);"
+            >
+              Specificity
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                (base)
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              1rem
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              0
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                768$
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              1.5rem
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              2
+            </td>
+          </tr>
+          <tr>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                1024$
+              </code>
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              2rem
+            </td>
+            <td style="font: var(--ds-type-p-sm); padding: var(--ds-space-150) var(--ds-space-300) var(--ds-space-150) 0; border-bottom: 1px solid var(--ds-color-border); vertical-align: top;">
+              2
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Tokens Radius smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="max-width: var(--ds-layout-max-width);">
+    <h1 style="font: var(--ds-type-h1); margin: 0px 0px 0.5rem;">
+      Radius
+    </h1>
+    <p style="font: var(--ds-type-p); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0 0 var(--ds-space-600);">
+      Ordinal steps in hundreds, plus radius.full for pills. 100 tags · 200 inputs · 300 cards · 400 sheets · full buttons / avatars.
+    </p>
+    <div style="display: grid; gap: var(--ds-space-300); grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));">
+      <figure style="margin: 0px;">
+        <div style="height: 96px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+        <figcaption style="margin-top: var(--ds-space-100);">
+          <div style="font: var(--ds-type-label);">
+            radius.100
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            2px
+          </div>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="height: 96px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-200);">
+        </div>
+        <figcaption style="margin-top: var(--ds-space-100);">
+          <div style="font: var(--ds-type-label);">
+            radius.200
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            4px
+          </div>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="height: 96px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-300);">
+        </div>
+        <figcaption style="margin-top: var(--ds-space-100);">
+          <div style="font: var(--ds-type-label);">
+            radius.300
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            8px
+          </div>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="height: 96px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-400);">
+        </div>
+        <figcaption style="margin-top: var(--ds-space-100);">
+          <div style="font: var(--ds-type-label);">
+            radius.400
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            14px
+          </div>
+        </figcaption>
+      </figure>
+      <figure style="margin: 0px;">
+        <div style="height: 96px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-full);">
+        </div>
+        <figcaption style="margin-top: var(--ds-space-100);">
+          <div style="font: var(--ds-type-label);">
+            radius.full
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            9999px
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tokens Spacing smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="max-width: var(--ds-layout-max-width);">
+    <h1 style="font: var(--ds-type-h1); margin: 0px 0px 0.5rem;">
+      Spacing
+    </h1>
+    <p style="font: var(--ds-type-p); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0 0 var(--ds-space-600);">
+      8px base unit = space.100; the step number tracks that multiple ×100. space.25 / space.50 are the sub-base exceptions. Only these steps ship.
+    </p>
+    <div style="display: grid; gap: var(--ds-space-200);">
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.25
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          0.125rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-25); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.50
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          0.25rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-50); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.100
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          0.5rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-100); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.150
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          0.75rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-150); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.200
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          1rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-200); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.300
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          1.5rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-300); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.400
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          2rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-400); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.600
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          3rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-600); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.800
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          4rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-800); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--ds-space-300);">
+        <div style="width: 120px; font: var(--ds-type-label);">
+          space.1200
+        </div>
+        <div style="width: 64px; font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+          6rem
+        </div>
+        <div style="height: 16px; width: var(--ds-space-1200); background: var(--ds-color-primary); border-radius: var(--ds-radius-100);">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tokens Typography smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="max-width: var(--ds-layout-max-width);">
+    <h1 style="font: var(--ds-type-h1); margin: 0px 0px 0.5rem;">
+      Typography
+    </h1>
+    <p style="font: var(--ds-type-p); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0 0 var(--ds-space-600);">
+      Each token is one complete CSS font shorthand — apply a whole style with font: var(--ds-type-h1). Bricolage Grotesque for display sizes, Public Sans for text, IBM Plex Mono for overline. Fonts load from an @import at the top of tokens.css.
+    </p>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-display);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        display · normal normal 800 2.5rem/1.05 'Bricolage Grotesque', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-h1);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        h1 · normal normal 800 2rem/1.125 'Bricolage Grotesque', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-h2);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        h2 · normal normal 600 1.625rem/1.15 'Bricolage Grotesque', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-h3);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        h3 · normal normal 700 1.3125rem/1.24 'Public Sans', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-h4);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        h4 · normal normal 700 1.0625rem/1.29 'Public Sans', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-p);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        p · normal normal 400 1rem/1.625 'Public Sans', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-p-sm);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        p-sm · normal normal 400 0.9375rem/1.53 'Public Sans', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-label);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        label · normal normal 500 0.875rem/1.43 'Public Sans', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-caption);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        caption · normal normal 400 0.8125rem/1.46 'Public Sans', sans-serif
+      </div>
+    </div>
+    <div style="padding: var(--ds-space-300) 0; border-bottom: 1px solid var(--ds-color-border);">
+      <div style="font: var(--ds-type-overline);">
+        Grumpy wizards make toxic brew for the evil Queen and Jack.
+      </div>
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+        overline · normal normal 500 0.75rem/1.33 'IBM Plex Mono', ui-monospace, monospace
+      </div>
+    </div>
+  </div>
+</div>
 `;
