@@ -1,5 +1,6 @@
 /**
  * `@design-system/components` public entry point.
- * Scaffold: only the `Placeholder` component.
  */
 export { Placeholder } from "./Placeholder.js";
+export { Text } from "./Text.js";
+export type { TextElement, TextProps, TextVariant } from "./Text.js";

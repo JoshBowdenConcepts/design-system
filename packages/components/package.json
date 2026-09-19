@@ -10,7 +10,13 @@
     }
   },
   "types": "./dist/web/index.d.ts",
-  "files": ["dist/web", "dist/ios"],
+  "files": [
+    "dist/web",
+    "dist/ios"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "build": "tsx src/generate.ts && tsc -p tsconfig.build.json",
     "generate": "tsx src/generate.ts",
@@ -20,7 +26,8 @@
   },
   "dependencies": {
     "@design-system/icons": "workspace:*",
-    "@design-system/tokens": "workspace:*"
+    "@design-system/tokens": "workspace:*",
+    "clsx": "^2.1.1"
   },
   "peerDependencies": {
     "react": "^18 || ^19",

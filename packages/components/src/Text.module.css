@@ -1,0 +1,76 @@
+.default-p {
+  font: var(--ds-type-p);
+}
+
+.default-span {
+  font: inherit;
+}
+
+.default-div {
+  font: var(--ds-type-p);
+}
+
+.default-h1 {
+  font: var(--ds-type-h1);
+}
+
+.default-h2 {
+  font: var(--ds-type-h2);
+}
+
+.default-h3 {
+  font: var(--ds-type-h3);
+}
+
+.default-h4 {
+  font: var(--ds-type-h4);
+}
+
+.default-label {
+  font: var(--ds-type-label);
+}
+
+.default-strong {
+  font: inherit;
+  font-weight: 700;
+}
+
+.variant-display {
+  font: var(--ds-type-display);
+}
+
+.variant-h1 {
+  font: var(--ds-type-h1);
+}
+
+.variant-h2 {
+  font: var(--ds-type-h2);
+}
+
+.variant-h3 {
+  font: var(--ds-type-h3);
+}
+
+.variant-h4 {
+  font: var(--ds-type-h4);
+}
+
+.variant-p {
+  font: var(--ds-type-p);
+}
+
+.variant-p-sm {
+  font: var(--ds-type-p-sm);
+}
+
+.variant-label {
+  font: var(--ds-type-label);
+}
+
+.variant-caption {
+  font: var(--ds-type-caption);
+}
+
+.variant-overline {
+  font: var(--ds-type-overline);
+}

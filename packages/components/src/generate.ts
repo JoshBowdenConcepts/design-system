@@ -6,15 +6,16 @@
  *
  * Deterministic; valid even with no real components authored.
  */
-import { mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, rmSync, writeFileSync, copyFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const pkgRoot = join(here, "..");
 const iosDir = join(pkgRoot, "dist", "ios", "DesignSystemComponents");
+const webDir = join(pkgRoot, "dist", "web");
 
-const COMPONENTS: string[] = ["Placeholder"];
+const COMPONENTS: string[] = ["Placeholder", "Text"];
 
 export function renderSwift(components: string[]): string {
   const names = components.map((c) => `    // ${c}`).join("\n");
@@ -23,14 +24,16 @@ export function renderSwift(components: string[]): string {
 }
 
 export function generate(): void {
-  rmSync(join(pkgRoot, "dist", "ios"), { recursive: true, force: true });
+  rmSync(join(pkgRoot, "dist"), { recursive: true, force: true });
   mkdirSync(iosDir, { recursive: true });
+  mkdirSync(webDir, { recursive: true });
   writeFileSync(join(iosDir, "Components.swift"), renderSwift(COMPONENTS), "utf8");
+  copyFileSync(join(here, "Text.module.css"), join(webDir, "Text.module.css"));
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   generate();
   console.log(
-    `@design-system/components: generated Swift stub for ${COMPONENTS.length} component(s)`,
+    `@design-system/components: generated Swift stub for ${COMPONENTS.length} component(s) and copied CSS Module assets`,
   );
 }
