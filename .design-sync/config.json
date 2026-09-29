@@ -1,0 +1,11 @@
+{
+  "projectId": "85d331e9-dfea-4312-b38e-2b335f79474e",
+  "shape": "storybook",
+  "storybookConfigDir": "apps/docs/.storybook",
+  "pkg": "@design-system/components",
+  "storybookStatic": ".design-sync/sb-reference",
+  "buildCmd": "pnpm -F \"@design-system/components...\" build",
+  "tokensPkg": "@design-system/tokens",
+  "tokensGlob": "dist/web/*.css",
+  "readmeHeader": ".design-sync/conventions.md"
+}

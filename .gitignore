@@ -21,3 +21,11 @@ DerivedData/
 /test-results/
 /playwright-report/
 /blob-report/
+
+# design-sync
+.design-sync/sb-reference/
+.design-sync/learnings/
+.design-sync/.cache/
+.design-sync/node_modules
+.ds-sync/
+ds-bundle/
