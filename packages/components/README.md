@@ -31,6 +31,12 @@ Variants use the existing type-token names (`display`, `h1`, `h2`, `h3`, `h4`,
 element's default style. Consumer `className` values are merged alongside the
 module-generated classes.
 
+The iOS `DesignSystemText` API uses a typed `TextRole` enum and the generated
+typography descriptors from `DesignSystemTokens`. It preserves SwiftUI text
+semantics; the web-only `as` HTML element prop is not part of the native API.
+Authored Swift sources live in `src/ios/` and are copied into generated
+`dist/ios/` output during the package build.
+
 ## Commands
 
 ```bash

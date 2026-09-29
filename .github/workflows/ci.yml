@@ -6,6 +6,30 @@ on:
   pull_request:
 
 jobs:
+  ios:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: brew install xcodegen
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: xcodegen generate --spec apps/ios-workbench/project.yml
+      - name: Run iOS Simulator tests
+        run: >-
+          xcodebuild test
+          -project apps/ios-workbench/iOSComponentWorkbench.xcodeproj
+          -scheme iOSComponentWorkbench
+          -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+
   build:
     runs-on: ubuntu-latest
     steps:

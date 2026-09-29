@@ -5,10 +5,6 @@ A pnpm + Turborepo monorepo with three independently versioned packages —
 each generating both a web output (CSS custom properties + typed JS) and iOS
 Swift sources.
 
-> **Status:** scaffolding only. No real design tokens, icons, or components are
-> authored yet — just the structural packages, the build pipeline, and one
-> clearly-labelled placeholder per package to prove the pipeline works.
-
 ## Getting started
 
 ```bash
@@ -21,16 +17,18 @@ Requires **Node.js 22+** (CI runs Node 24).
 
 ## Commands
 
-| Command | What it does |
-|---------|--------------|
-| `pnpm build` | Builds all packages in dependency order (`tokens → icons → components`), producing `dist/web/**` and `dist/ios/**` for each. |
-| `pnpm dev` | `turbo watch` + Storybook on <http://localhost:6006>. Source changes propagate to Storybook after rebuild, no publish. |
-| `pnpm test` | Runs every package's Vitest project. |
-| `pnpm lint` | ESLint (flat config) across the workspace. |
-| `pnpm typecheck` | `tsc --noEmit` per package. |
-| `pnpm check:deps` | Enforces the one-way dependency matrix (see below). |
-| `pnpm --filter docs build-storybook` | Builds the static Storybook. |
-| `pnpm --filter docs test-storybook` | Accessibility (`axe`) + visual-regression snapshot gate over every story. |
+| Command                              | What it does                                                                                                                 |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm build`                         | Builds all packages in dependency order (`tokens → icons → components`), producing `dist/web/**` and `dist/ios/**` for each. |
+| `pnpm dev`                           | `turbo watch` + Storybook on <http://localhost:6006>. Source changes propagate to Storybook after rebuild, no publish.       |
+| `pnpm test`                          | Runs every package's Vitest project.                                                                                         |
+| `pnpm lint`                          | ESLint (flat config) across the workspace.                                                                                   |
+| `pnpm typecheck`                     | `tsc --noEmit` per package.                                                                                                  |
+| `pnpm check:deps`                    | Enforces the one-way dependency matrix (see below).                                                                          |
+| `pnpm --filter docs build-storybook` | Builds the static Storybook.                                                                                                 |
+| `pnpm --filter docs test-storybook`  | Accessibility (`axe`) + visual-regression snapshot gate over every story.                                                    |
+| `pnpm ios:workbench`                 | Builds generated Swift sources and opens the local Xcode component workbench (macOS/Xcode required).                         |
+| `pnpm ios:build`                     | Builds the workbench for the iPhone 17 Pro simulator after regenerating package outputs.                                     |
 
 Per-package: `pnpm --filter @design-system/<layer> run <script>`.
 
@@ -39,10 +37,10 @@ Per-package: `pnpm --filter @design-system/<layer> run <script>`.
 One-way only. Enforced by `scripts/check-deps.mjs` (in CI and via
 `pnpm check:deps`) and, as a secondary guard, by an ESLint import-boundary rule.
 
-| Package | May depend on |
-|---------|---------------|
-| `@design-system/tokens` | — (nothing) |
-| `@design-system/icons` | `tokens` |
+| Package                     | May depend on     |
+| --------------------------- | ----------------- |
+| `@design-system/tokens`     | — (nothing)       |
+| `@design-system/icons`      | `tokens`          |
 | `@design-system/components` | `tokens`, `icons` |
 
 Adding a fourth package under `packages/`, or a reverse dependency, fails the
@@ -64,6 +62,9 @@ targets: [
   ]),
 ]
 ```
+
+The local catalog and Text-role previews live in `apps/ios-workbench`; the app
+consumes the existing three SwiftPM products and is not a fourth package layer.
 
 ## Renaming the `@design-system` scope
 

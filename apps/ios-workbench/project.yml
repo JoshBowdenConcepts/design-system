@@ -1,0 +1,70 @@
+name: iOSComponentWorkbench
+options:
+  deploymentTarget:
+    iOS: "15.0"
+packages:
+  design-system:
+    path: ../..
+  SnapshotTesting:
+    url: https://github.com/pointfreeco/swift-snapshot-testing
+    from: 1.18.0
+targets:
+  iOSComponentWorkbench:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - package: design-system
+        product: DesignSystemComponents
+      - package: design-system
+        product: DesignSystemTokens
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.designsystem.workbench
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        SWIFT_VERSION: 5.0
+  iOSComponentWorkbenchTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+      - path: ../../packages/components/tests/ios
+      - path: ../../packages/tokens/tests/ios
+    dependencies:
+      - target: iOSComponentWorkbench
+      - package: design-system
+        product: DesignSystemComponents
+      - package: design-system
+        product: DesignSystemTokens
+      - package: SnapshotTesting
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.designsystem.workbench.tests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: 5.0
+  iOSComponentWorkbenchUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: iOSComponentWorkbench
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.designsystem.workbench.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: 5.0
+schemes:
+  iOSComponentWorkbench:
+    build:
+      targets:
+        iOSComponentWorkbench: all
+        iOSComponentWorkbenchTests: [test]
+        iOSComponentWorkbenchUITests: [test]
+    test:
+      targets:
+        - iOSComponentWorkbenchTests
+        - iOSComponentWorkbenchUITests

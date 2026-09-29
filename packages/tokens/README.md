@@ -19,10 +19,12 @@ export const layout: Tokens = {
   gutter: {
     value: "1rem",
     overrides: {
-      dark: "1rem",                    // colour mode
-      "768$": "1.5rem",                // min-width breakpoint (px)
-      ".compact": { value: "0.75rem",  // class-name scope → .ds-scope-compact
-        dark: "0.5rem" },              // …axes nest in any order, any depth
+      dark: "1rem", // colour mode
+      "768$": "1.5rem", // min-width breakpoint (px)
+      ".compact": {
+        value: "0.75rem", // class-name scope → .ds-scope-compact
+        dark: "0.5rem",
+      }, // …axes nest in any order, any depth
     },
   },
 };
@@ -47,11 +49,11 @@ bg: {
 
 Override key markers:
 
-| Axis | Key | Emitted selector |
-|------|-----|------------------|
-| colour mode | bare `light` / `dark` | `[data-theme="dark"]` (light folds into `:root`) |
-| breakpoint | `<number>$` e.g. `768$` | `@media (min-width: 768px)` |
-| class-name scope | `.<name>` e.g. `.compact` | `.ds-scope-compact` |
+| Axis             | Key                       | Emitted selector                                 |
+| ---------------- | ------------------------- | ------------------------------------------------ |
+| colour mode      | bare `light` / `dark`     | `[data-theme="dark"]` (light folds into `:root`) |
+| breakpoint       | `<number>$` e.g. `768$`   | `@media (min-width: 768px)`                      |
+| class-name scope | `.<name>` e.g. `.compact` | `.ds-scope-compact`                              |
 
 Two override trees that express the same set of conditions resolve identically
 regardless of nesting order. When conditions overlap at runtime the more
@@ -64,10 +66,15 @@ parts), purely through the CSS cascade.
 whole style:
 
 ```ts
-p: { value: "normal normal 400 1rem/1.625 'Public Sans', sans-serif" }
+p: {
+  value: "normal normal 400 1rem/1.625 'Public Sans', sans-serif";
+}
 ```
+
 ```css
-p { font: var(--ds-type-p); }
+p {
+  font: var(--ds-type-p);
+}
 ```
 
 The three families the `type` tokens name (Bricolage Grotesque, Public Sans, IBM
@@ -91,12 +98,15 @@ exported — only semantic `--ds-color-<role>` tokens are public.
 import { tokens, resolvedTokens } from "@design-system/tokens";
 import "@design-system/tokens/tokens.css";
 
-tokens["type.p"].value;                              // authored base value
+tokens["type.p"].value; // authored base value
 resolvedTokens.filter((r) => r.name === "color.bg"); // every finalized value + condition-set
 ```
 
 ```css
-.card { background: var(--ds-color-bg-raised); color: var(--ds-color-text-primary); }
+.card {
+  background: var(--ds-color-bg-raised);
+  color: var(--ds-color-text-primary);
+}
 ```
 
 ## Contracts
@@ -111,5 +121,10 @@ pnpm --filter @design-system/tokens run build      # generate dist/web + dist/io
 pnpm --filter @design-system/tokens run test       # Vitest
 pnpm --filter @design-system/tokens run typecheck  # tsc --noEmit
 ```
+
+The iOS output includes typed typography descriptors and licensed font resources
+generated from the same `src/tokens/type.ts` values used for web CSS. Native
+consumers register bundled faces through `DesignSystemTokenFonts`; do not
+duplicate font sizes, weights, families, or line-height decisions in Swift.
 
 Generated files under `dist/` are never hand-edited.

@@ -6,7 +6,14 @@
  *
  * Deterministic; valid even with no real components authored.
  */
-import { mkdirSync, rmSync, writeFileSync, copyFileSync } from "node:fs";
+import {
+  mkdirSync,
+  rmSync,
+  writeFileSync,
+  copyFileSync,
+  readdirSync,
+  existsSync,
+} from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -27,7 +34,24 @@ export function generate(): void {
   rmSync(join(pkgRoot, "dist"), { recursive: true, force: true });
   mkdirSync(iosDir, { recursive: true });
   mkdirSync(webDir, { recursive: true });
-  writeFileSync(join(iosDir, "Components.swift"), renderSwift(COMPONENTS), "utf8");
+  writeFileSync(
+    join(iosDir, "Components.swift"),
+    renderSwift(COMPONENTS),
+    "utf8",
+  );
+  const iosSourceDir = join(here, "ios");
+  const sources = existsSync(iosSourceDir)
+    ? readdirSync(iosSourceDir, {
+        recursive: true,
+        withFileTypes: true,
+      }).filter((entry) => entry.isFile() && entry.name.endsWith(".swift"))
+    : [];
+  for (const source of sources) {
+    copyFileSync(
+      join(source.parentPath, source.name),
+      join(iosDir, source.name),
+    );
+  }
   copyFileSync(join(here, "Text.module.css"), join(webDir, "Text.module.css"));
 }
 

@@ -9,6 +9,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "concurrently -k -n turbo,storybook -c blue,magenta \"turbo watch build\" \"pnpm --filter docs storybook\"",
+    "ios:workbench": "pnpm build && xcodegen generate --spec apps/ios-workbench/project.yml && open apps/ios-workbench/iOSComponentWorkbench.xcodeproj",
+    "ios:build": "pnpm build && xcodegen generate --spec apps/ios-workbench/project.yml && xcodebuild -project apps/ios-workbench/iOSComponentWorkbench.xcodeproj -scheme iOSComponentWorkbench -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build",
     "test": "turbo run test && vitest run --project scripts",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",

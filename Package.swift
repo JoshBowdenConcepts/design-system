@@ -19,7 +19,8 @@ let package = Package(
     targets: [
         .target(
             name: "DesignSystemTokens",
-            path: "packages/tokens/dist/ios/DesignSystemTokens"
+            path: "packages/tokens/dist/ios/DesignSystemTokens",
+            resources: [.process("Fonts")]
         ),
         .target(
             name: "DesignSystemIcons",
