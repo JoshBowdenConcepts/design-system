@@ -90,10 +90,161 @@ ${icons
 `;
 }
 
+/** One structured SVG path drawing operation, in the icon's own viewBox units. */
+type PathOp =
+  | { op: "move"; x: number; y: number }
+  | { op: "line"; x: number; y: number }
+  | { op: "curve"; x1: number; y1: number; x2: number; y2: number; x: number; y: number }
+  | { op: "close" };
+
+const NUMBER_RE = /-?\d*\.?\d+(?:e[-+]?\d+)?/gi;
+
+function parseNumbers(s: string): number[] {
+  return (s.match(NUMBER_RE) ?? []).map(Number);
+}
+
+/**
+ * Parse one SVG path `d` attribute into absolute-coordinate drawing ops, so
+ * the same source SVG drives both the web `<path>` (used verbatim) and a
+ * generated native SwiftUI `Shape` — one design decision, two projections
+ * (constitution: Generate, Do Not Fork).
+ *
+ * Supports M/L/H/V/C/Z (upper and lower case) — the commands simple icon
+ * sets use. An unsupported command (arcs, quadratic/shorthand curves) throws
+ * naming the offending command rather than silently emitting a wrong shape.
+ */
+export function parsePathToOps(d: string): PathOp[] {
+  const ops: PathOp[] = [];
+  const commandRe = /([A-Za-z])([^A-Za-z]*)/g;
+  let cx = 0;
+  let cy = 0;
+  let sx = 0;
+  let sy = 0;
+  let match: RegExpExecArray | null;
+  while ((match = commandRe.exec(d))) {
+    const type = match[1]!;
+    const nums = parseNumbers(match[2] ?? "");
+    const relative = type === type.toLowerCase();
+    const upper = type.toUpperCase();
+
+    switch (upper) {
+      case "M":
+        for (let i = 0; i < nums.length; i += 2) {
+          const x = relative ? cx + nums[i]! : nums[i]!;
+          const y = relative ? cy + nums[i + 1]! : nums[i + 1]!;
+          if (i === 0) {
+            ops.push({ op: "move", x, y });
+            sx = x;
+            sy = y;
+          } else {
+            // A moveto with additional coordinate pairs treats them as lineto.
+            ops.push({ op: "line", x, y });
+          }
+          cx = x;
+          cy = y;
+        }
+        break;
+      case "L":
+        for (let i = 0; i < nums.length; i += 2) {
+          const x = relative ? cx + nums[i]! : nums[i]!;
+          const y = relative ? cy + nums[i + 1]! : nums[i + 1]!;
+          ops.push({ op: "line", x, y });
+          cx = x;
+          cy = y;
+        }
+        break;
+      case "H":
+        for (const n of nums) {
+          cx = relative ? cx + n : n;
+          ops.push({ op: "line", x: cx, y: cy });
+        }
+        break;
+      case "V":
+        for (const n of nums) {
+          cy = relative ? cy + n : n;
+          ops.push({ op: "line", x: cx, y: cy });
+        }
+        break;
+      case "C":
+        for (let i = 0; i < nums.length; i += 6) {
+          const x1 = relative ? cx + nums[i]! : nums[i]!;
+          const y1 = relative ? cy + nums[i + 1]! : nums[i + 1]!;
+          const x2 = relative ? cx + nums[i + 2]! : nums[i + 2]!;
+          const y2 = relative ? cy + nums[i + 3]! : nums[i + 3]!;
+          const x = relative ? cx + nums[i + 4]! : nums[i + 4]!;
+          const y = relative ? cy + nums[i + 5]! : nums[i + 5]!;
+          ops.push({ op: "curve", x1, y1, x2, y2, x, y });
+          cx = x;
+          cy = y;
+        }
+        break;
+      case "Z":
+        ops.push({ op: "close" });
+        cx = sx;
+        cy = sy;
+        break;
+      default:
+        throw new Error(`Unsupported SVG path command '${type}' — only M/L/H/V/C/Z are supported`);
+    }
+  }
+  return ops;
+}
+
+/** `"0 0 24 24"` -> `{ width: 24, height: 24 }`. */
+export function parseViewBoxSize(viewBox: string): { width: number; height: number } {
+  const parts = parseNumbers(viewBox);
+  const width = parts[2];
+  const height = parts[3];
+  if (width === undefined || height === undefined) {
+    throw new Error(`Malformed viewBox '${viewBox}'`);
+  }
+  return { width, height };
+}
+
+/**
+ * One icon's native projection: a SwiftUI `Shape`, scaled from its own
+ * viewBox to whatever frame the caller gives it. A `Shape` (rather than a
+ * `View` with an explicit `.fill(...)`) inherits the ambient foreground
+ * style when used directly, the same way the web component's `currentColor`
+ * fill inherits its caller's text color.
+ */
+export function renderSwiftShape(icon: Icon): string {
+  const { width, height } = parseViewBoxSize(icon.viewBox);
+  const ops = icon.paths.flatMap((d) => parsePathToOps(d));
+  const lines = ops.map((op) => {
+    switch (op.op) {
+      case "move":
+        return `        path.move(to: CGPoint(x: ${op.x} * sx, y: ${op.y} * sy))`;
+      case "line":
+        return `        path.addLine(to: CGPoint(x: ${op.x} * sx, y: ${op.y} * sy))`;
+      case "curve":
+        return `        path.addCurve(to: CGPoint(x: ${op.x} * sx, y: ${op.y} * sy), control1: CGPoint(x: ${op.x1} * sx, y: ${op.y1} * sy), control2: CGPoint(x: ${op.x2} * sx, y: ${op.y2} * sy))`;
+      case "close":
+        return `        path.closeSubpath()`;
+    }
+  });
+  return `public struct ${icon.componentName}: Shape {
+    public init() {}
+
+    public func path(in rect: CGRect) -> Path {
+        let sx = rect.width / ${width}
+        let sy = rect.height / ${height}
+        var path = Path()
+${lines.join("\n")}
+        return path
+    }
+}`;
+}
+
 export function renderSwift(icons: Icon[]): string {
   const names = icons.map((i) => `    // ${i.componentName}`).join("\n");
   const body = names ? `\n${names}\n` : "\n";
-  return `// Generated by @design-system/icons. Do not edit.\nimport DesignSystemTokens\n\npublic enum DesignSystemIcons {${body}}\n`;
+  const namespace = `public enum DesignSystemIcons {${body}}`;
+  if (icons.length === 0) {
+    return `// Generated by @design-system/icons. Do not edit.\nimport DesignSystemTokens\n\n${namespace}\n`;
+  }
+  const shapes = icons.map(renderSwiftShape).join("\n\n");
+  return `// Generated by @design-system/icons. Do not edit.\nimport SwiftUI\nimport DesignSystemTokens\n\n${namespace}\n\n${shapes}\n`;
 }
 
 export function loadIcons(): Icon[] {

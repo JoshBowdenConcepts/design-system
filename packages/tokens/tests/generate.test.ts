@@ -5,7 +5,12 @@ import {
   validateTypographyFontFiles,
 } from "../src/typography.js";
 import { describe, expect, it } from "vitest";
-import { cssVarName, renderCss, renderSwift } from "../src/generate.js";
+import {
+  cssVarName,
+  parseLengthToPoints,
+  renderCss,
+  renderSwift,
+} from "../src/generate.js";
 import { fontImports } from "../src/fonts.js";
 import { tokens } from "../src/tokens/index.js";
 import {
@@ -135,17 +140,60 @@ describe("renderCss — empty / well-formed", () => {
   });
 });
 
+describe("parseLengthToPoints", () => {
+  it("converts rem to points at 1rem = 16pt", () => {
+    expect(parseLengthToPoints("1.5rem")).toBe(24);
+    expect(parseLengthToPoints("0.25rem")).toBe(4);
+  });
+
+  it("converts px to points 1:1", () => {
+    expect(parseLengthToPoints("4px")).toBe(4);
+    expect(parseLengthToPoints("44px")).toBe(44);
+  });
+
+  it("returns undefined for units with no fixed point equivalent", () => {
+    expect(parseLengthToPoints("68ch")).toBeUndefined();
+  });
+});
+
 describe("renderSwift", () => {
-  it("emits base-value constants with sanitised camelCase identifiers", () => {
+  it("emits typography constants unchanged (String, base value only)", () => {
     const swift = renderSwift(tokens);
     expect(swift).toMatch(
       /public static let typeP: String = "normal normal 400 1rem\/1\.625 'Public Sans', sans-serif"/,
     );
-    expect(swift).toMatch(/public static let colorBg: String = "#fbfcfc"/);
-    expect(swift).toMatch(
-      /public static let layoutFocusRingWidth: String = "3px"/,
-    );
     expect(swift).not.toMatch(/public static let [a-z]+\.[a-z]/);
+  });
+
+  it("emits space/radius/layout length tokens as CGFloat points", () => {
+    const swift = renderSwift(tokens);
+    expect(swift).toMatch(/public static let space300: CGFloat = 24/);
+    expect(swift).toMatch(/public static let radius200: CGFloat = 4/);
+    expect(swift).toMatch(/public static let layoutFocusRingWidth: CGFloat = 3/);
+    expect(swift).toMatch(/public static let layoutTouchMin: CGFloat = 44/);
+  });
+
+  it("keeps a length with no point equivalent (e.g. `ch`) as a String", () => {
+    expect(renderSwift(tokens)).toMatch(
+      /public static let layoutMeasure: String = "68ch"/,
+    );
+  });
+
+  it("emits color tokens as a dynamic light/dark SwiftUI Color", () => {
+    const swift = renderSwift(tokens);
+    expect(swift).toMatch(
+      /public static let colorBg: Color = dsColor\(light: "#fbfcfc", dark: "#0b1210"\)/,
+    );
+    expect(swift).toMatch(
+      /public static let colorPrimary: Color = dsColor\(light: "#04724d", dark: "#55e39b"\)/,
+    );
+  });
+
+  it("includes the SwiftUI/UIKit imports and the dsColor helper once", () => {
+    const swift = renderSwift(tokens);
+    expect(swift).toContain("import SwiftUI");
+    expect(swift).toContain("import UIKit");
+    expect(swift.match(/private func dsColor/g)).toHaveLength(1);
   });
 
   it("still produces a valid namespace enum for no tokens", () => {

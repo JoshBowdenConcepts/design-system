@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Style Guide Overview smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <main style="max-width: var(--ds-layout-max-width); margin: 0px auto; padding: clamp(1rem, 4vw, 3rem) var(--ds-layout-gutter) 6rem;">
+    <header style="display: grid; grid-template-columns: minmax(0px, 1.4fr) minmax(220px, 0.6fr); gap: var(--ds-space-800); align-items: end; padding-bottom: clamp(3rem, 8vw, 8rem); border-bottom: 1px solid var(--ds-color-border);">
+      <div>
+        <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); text-transform: uppercase; margin-bottom: var(--ds-space-300);">
+          DS / 01
+        </div>
+        <h1 style="font: var(--ds-type-display); letter-spacing: 0px; margin: 0px; max-width: 12ch;">
+          A quiet system with a clear point of view.
+        </h1>
+      </div>
+      <p style="font: var(--ds-type-p-sm); color: var(--ds-color-text-secondary); max-width: var(--ds-layout-measure); margin: 0px;">
+        The shared language for surfaces, type, space, and interaction. Built from semantic tokens so every screen can move together.
+      </p>
+    </header>
+    <section style="margin-top: clamp(3rem, 7vw, 7rem);">
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); text-transform: uppercase; margin-bottom: var(--ds-space-100);">
+        01 / Color
+      </div>
+      <h2 style="font: var(--ds-type-h2); margin: 0 0 var(--ds-space-400);">
+        Roles before ramps
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--ds-space-300);">
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-bg); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            bg
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-bg
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-bg-raised); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            bg-raised
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-bg-raised
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-bg-sunken); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            bg-sunken
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-bg-sunken
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-text-primary); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            text-primary
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-text-primary
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-primary); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            primary
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-primary
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-primary-subtle); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            primary-subtle
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-primary-subtle
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-info); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            info
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-info
+          </div>
+        </div>
+        <div>
+          <div style="aspect-ratio: 1.35 / 1; background: var(--ds-color-danger); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-200);">
+          </div>
+          <div style="font: var(--ds-type-label); margin-top: var(--ds-space-100);">
+            danger
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            --ds-color-danger
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--ds-space-300); margin-top: var(--ds-space-600);">
+        <div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); padding: var(--ds-space-400); border-radius: var(--ds-radius-300); font: var(--ds-type-h4);">
+          text-primary on bg
+        </div>
+        <div style="background: var(--ds-color-primary); color: var(--ds-color-on-primary); padding: var(--ds-space-400); border-radius: var(--ds-radius-300); font: var(--ds-type-h4);">
+          on-primary on primary
+        </div>
+        <div style="background: var(--ds-color-primary-subtle); color: var(--ds-color-primary); padding: var(--ds-space-400); border-radius: var(--ds-radius-300); font: var(--ds-type-h4);">
+          primary on primary-subtle
+        </div>
+      </div>
+    </section>
+    <section style="margin-top: clamp(3rem, 7vw, 7rem);">
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); text-transform: uppercase; margin-bottom: var(--ds-space-100);">
+        02 / Type
+      </div>
+      <h2 style="font: var(--ds-type-h2); margin: 0 0 var(--ds-space-400);">
+        A readable scale with a little character
+      </h2>
+      <div style="display: grid; gap: var(--ds-space-400);">
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-display);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.display
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-h1);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.h1
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-h2);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.h2
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-h3);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.h3
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-h4);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.h4
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-p);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.p
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-p-sm);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.p-sm
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-label);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.label
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-caption);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.caption
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid var(--ds-color-border); padding-bottom: var(--ds-space-300);">
+          <div style="font: var(--ds-type-overline);">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-top: var(--ds-space-100);">
+            type.overline
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="margin-top: clamp(3rem, 7vw, 7rem);">
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); text-transform: uppercase; margin-bottom: var(--ds-space-100);">
+        03 / Rhythm
+      </div>
+      <h2 style="font: var(--ds-type-h2); margin: 0 0 var(--ds-space-400);">
+        Space and shape
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--ds-space-800);">
+        <div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-bottom: var(--ds-space-300);">
+            SPACE
+          </div>
+          <div style="display: grid; gap: var(--ds-space-200);">
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                25
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-25);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  0.125rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                50
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-50);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  0.25rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                100
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-100);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  0.5rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                150
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-150);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  0.75rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                200
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-200);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  1rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                300
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-300);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  1.5rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                400
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-400);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  2rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                600
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-600);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  3rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                800
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-800);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  4rem
+                </div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: minmax(90px, 0.7fr) 1fr; gap: var(--ds-space-300); align-items: center;">
+              <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+                1200
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--ds-space-200);">
+                <div style="flex: 1 1 0%; height: 8px; background: var(--ds-color-primary); border-radius: var(--ds-radius-100); max-width: var(--ds-space-1200);">
+                </div>
+                <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); min-width: 52px; text-align: right;">
+                  6rem
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); margin-bottom: var(--ds-space-300);">
+            RADIUS
+          </div>
+          <div style="display: flex; gap: var(--ds-space-300); flex-wrap: wrap;">
+            <div title="radius.100"
+                 style="width: 72px; height: 72px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-100);"
+            >
+            </div>
+            <div title="radius.200"
+                 style="width: 72px; height: 72px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-200);"
+            >
+            </div>
+            <div title="radius.300"
+                 style="width: 72px; height: 72px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-300);"
+            >
+            </div>
+            <div title="radius.400"
+                 style="width: 72px; height: 72px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-400);"
+            >
+            </div>
+            <div title="radius.full"
+                 style="width: 72px; height: 72px; background: var(--ds-color-primary-subtle); border: 2px solid var(--ds-color-primary); border-radius: var(--ds-radius-full);"
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="margin-top: clamp(3rem, 7vw, 7rem);">
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); text-transform: uppercase; margin-bottom: var(--ds-space-100);">
+        04 / States
+      </div>
+      <h2 style="font: var(--ds-type-h2); margin: 0 0 var(--ds-space-400);">
+        A small set of dependable actions
+      </h2>
+      <div style="display: flex; gap: var(--ds-space-200); flex-wrap: wrap; align-items: center;">
+        <button type="button"
+                style="border: 0px; border-radius: var(--ds-radius-full); background: var(--ds-color-primary); color: var(--ds-color-on-primary); padding: 0.75rem 1.25rem; font: var(--ds-type-label);"
+        >
+          Continue
+        </button>
+        <button type="button"
+                style="border: 1px solid var(--ds-color-border-strong); border-radius: var(--ds-radius-full); background: transparent; color: var(--ds-color-text-primary); padding: 0.7rem 1.25rem; font: var(--ds-type-label);"
+        >
+          Secondary
+        </button>
+        <span style="padding: var(--ds-space-100) var(--ds-space-200); border-radius: var(--ds-radius-full); background: var(--ds-color-primary-subtle); color: var(--ds-color-primary); font: var(--ds-type-overline);">
+          ACTIVE
+        </span>
+      </div>
+    </section>
+    <section style="margin-top: clamp(3rem, 7vw, 7rem);">
+      <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary); text-transform: uppercase; margin-bottom: var(--ds-space-100);">
+        05 / Overrides
+      </div>
+      <h2 style="font: var(--ds-type-h2); margin: 0 0 var(--ds-space-400);">
+        One token, every context
+      </h2>
+      <div style="border: 1px solid var(--ds-color-border-strong); border-radius: var(--ds-radius-300); overflow: hidden;">
+        <div style="padding: var(--ds-space-300); background: var(--ds-color-bg-raised); border-bottom: 1px solid var(--ds-color-border);">
+          <div style="font: var(--ds-type-label);">
+            color.bg
+          </div>
+          <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            one token, five condition sets
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--ds-space-300); padding: var(--ds-space-200) var(--ds-space-300); border-bottom: 1px solid var(--ds-color-border);">
+          <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            base
+          </code>
+          <span style="font: var(--ds-type-label);">
+            #fbfcfc
+          </span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--ds-space-300); padding: var(--ds-space-200) var(--ds-space-300); border-bottom: 1px solid var(--ds-color-border);">
+          <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            dark
+          </code>
+          <span style="font: var(--ds-type-label);">
+            #0b1210
+          </span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--ds-space-300); padding: var(--ds-space-200) var(--ds-space-300); border-bottom: 1px solid var(--ds-color-border);">
+          <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            768$
+          </code>
+          <span style="font: var(--ds-type-label);">
+            #f1f5f3
+          </span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--ds-space-300); padding: var(--ds-space-200) var(--ds-space-300); border-bottom: 1px solid var(--ds-color-border);">
+          <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            .compact
+          </code>
+          <span style="font: var(--ds-type-label);">
+            #eff6f3
+          </span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: var(--ds-space-300); padding: var(--ds-space-200) var(--ds-space-300); border-bottom: 1px solid var(--ds-color-border);">
+          <code style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+            dark + 768$ + .compact
+          </code>
+          <span style="font: var(--ds-type-label);">
+            #101815
+          </span>
+        </div>
+        <div data-theme="dark"
+             style="padding: var(--ds-space-300); background: var(--ds-color-bg); color: var(--ds-color-text-primary);"
+        >
+          <div class="ds-scope-compact"
+               style="padding: var(--ds-space-200); background: var(--ds-color-bg);"
+          >
+            <div style="font: var(--ds-type-label);">
+              Triple override
+            </div>
+            <div style="font: var(--ds-type-overline); color: var(--ds-color-text-secondary);">
+              dark + 768$ + .compact
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+`;

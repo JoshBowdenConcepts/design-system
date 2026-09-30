@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		0D7B304994A7710375B8715E /* WorkbenchSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D4B841A90A4B4C7396941 /* WorkbenchSnapshotTests.swift */; };
 		23E17D11662F08773077C2DE /* DesignSystemTokens in Frameworks */ = {isa = PBXBuildFile; productRef = AF85CE2D943DF34DA3D5D0D6 /* DesignSystemTokens */; };
+		306629E4978562A122DE8DF6 /* DesignSystemIcons in Frameworks */ = {isa = PBXBuildFile; productRef = 88751F8A028D3A88C3F74F4C /* DesignSystemIcons */; };
 		34B79E25827DA43215B1F71B /* TextRoleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4DADCC0446B149E1CE489C /* TextRoleGalleryView.swift */; };
 		3B94E0E9543C17CD3AC7D416 /* DesignSystemComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A7B5E2006735732226898A01 /* DesignSystemComponents */; };
 		3D54FDFA301363E99D76123C /* ComponentCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */; };
 		4707DEBA55FAD496593A2C68 /* ComponentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */; };
 		59CD1C771E87E6B4064FC7E6 /* DesignSystemTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */; };
+		695E3D20BF71B421E93FE9CE /* testButtonGallerySnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */; };
 		711653AE8D3C1FEC96292597 /* TextTokenIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */; };
 		76DD4692427DEC6BB432BE9A /* DesignSystemTokens in Frameworks */ = {isa = PBXBuildFile; productRef = D28592CAB7BF8B255F5F075F /* DesignSystemTokens */; };
 		788760503035449FA205BDFC /* WorkbenchCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48295E53AE3686655476B29 /* WorkbenchCatalogUITests.swift */; };
@@ -21,8 +23,10 @@
 		9AFAE87DDA7BF681D36513C9 /* CatalogAvailabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73CD0208F22D6866040BC4 /* CatalogAvailabilityView.swift */; };
 		AE4FB3CF8B29FE7F4D725F3C /* ComponentExampleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC383DBB046B0BA1F770A7C0 /* ComponentExampleDetailView.swift */; };
 		BE8A5B8BD212951348F7DFD7 /* testCatalogSnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */; };
+		C02B93CCF726072584B74EF7 /* DesignSystemButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */; };
 		DCBD8E50379192572AC581A0 /* WorkbenchCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADC332EC64703C58175C5A /* WorkbenchCatalogTests.swift */; };
 		E1012120614C0B7DA2A0E988 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 85210D82564E710729025929 /* SnapshotTesting */; };
+		E630F00C1A36399364895B40 /* ButtonExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D10CB22655EADFD3BBB1F79 /* ButtonExamples.swift */; };
 		E9A313771EA09C94E7E919AF /* TokenTypographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD710EDF45BA645E0CEB9E /* TokenTypographyTests.swift */; };
 		F87454FADEF75905BA7D4F94 /* DesignSystemComponents in Frameworks */ = {isa = PBXBuildFile; productRef = BE1C11048326391871F6AF3A /* DesignSystemComponents */; };
 		FC31BF6FF13B529CC103CC01 /* WorkbenchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35853D406BBF40E8FA31741D /* WorkbenchApp.swift */; };
@@ -47,20 +51,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D10CB22655EADFD3BBB1F79 /* ButtonExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExamples.swift; sourceTree = "<group>"; };
 		11C530266616379C20919B2D /* design-system */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "design-system"; path = ../..; sourceTree = SOURCE_ROOT; };
 		1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCatalogSnapshot.1.png; sourceTree = "<group>"; };
 		297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCatalogView.swift; sourceTree = "<group>"; };
 		33ADC332EC64703C58175C5A /* WorkbenchCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchCatalogTests.swift; sourceTree = "<group>"; };
 		35853D406BBF40E8FA31741D /* WorkbenchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchApp.swift; sourceTree = "<group>"; };
+		523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testButtonGallerySnapshot.1.png; sourceTree = "<group>"; };
 		5FDD710EDF45BA645E0CEB9E /* TokenTypographyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTypographyTests.swift; sourceTree = "<group>"; };
 		709FF1A5F6ADD788D2F0C6DB /* iOSComponentWorkbenchTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = iOSComponentWorkbenchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8925DEC81B9D80E14195D921 /* iOSComponentWorkbenchUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = iOSComponentWorkbenchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A335C15378BB8250099EDCD2 /* iOSComponentWorkbench.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = iOSComponentWorkbench.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A335C15378BB8250099EDCD2 /* iOSComponentWorkbench.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSComponentWorkbench.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48295E53AE3686655476B29 /* WorkbenchCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchCatalogUITests.swift; sourceTree = "<group>"; };
-		A61A4B8ECB9EE8F84CCF4812 /* typography-projection.integration.test.ts */ = {isa = PBXFileReference; path = "typography-projection.integration.test.ts"; sourceTree = "<group>"; };
+		A61A4B8ECB9EE8F84CCF4812 /* typography-projection.integration.test.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = "typography-projection.integration.test.ts"; sourceTree = "<group>"; };
 		B87F3B676C4F7A1E8B056EA3 /* testTextRoleGallerySnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testTextRoleGallerySnapshot.1.png; sourceTree = "<group>"; };
 		B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExample.swift; sourceTree = "<group>"; };
 		BA4DADCC0446B149E1CE489C /* TextRoleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRoleGalleryView.swift; sourceTree = "<group>"; };
+		C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemButtonTests.swift; sourceTree = "<group>"; };
 		DC383DBB046B0BA1F770A7C0 /* ComponentExampleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExampleDetailView.swift; sourceTree = "<group>"; };
 		DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTokenIntegrationTests.swift; sourceTree = "<group>"; };
 		F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTextTests.swift; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 			files = (
 				3B94E0E9543C17CD3AC7D416 /* DesignSystemComponents in Frameworks */,
 				23E17D11662F08773077C2DE /* DesignSystemTokens in Frameworks */,
+				306629E4978562A122DE8DF6 /* DesignSystemIcons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +147,7 @@
 		348FD279F7FAF90DE67D9C09 /* WorkbenchSnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */,
 				1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */,
 				B87F3B676C4F7A1E8B056EA3 /* testTextRoleGallerySnapshot.1.png */,
 			);
@@ -169,6 +178,7 @@
 		D34F26F299C1C31BFD0E53AF /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				0D10CB22655EADFD3BBB1F79 /* ButtonExamples.swift */,
 				FF73CD0208F22D6866040BC4 /* CatalogAvailabilityView.swift */,
 				297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */,
 				B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */,
@@ -191,6 +201,7 @@
 		FCCD464C588E922E00A34971 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */,
 				F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */,
 				DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */,
 			);
@@ -239,6 +250,7 @@
 			packageProductDependencies = (
 				A7B5E2006735732226898A01 /* DesignSystemComponents */,
 				AF85CE2D943DF34DA3D5D0D6 /* DesignSystemTokens */,
+				88751F8A028D3A88C3F74F4C /* DesignSystemIcons */,
 			);
 			productName = iOSComponentWorkbench;
 			productReference = A335C15378BB8250099EDCD2 /* iOSComponentWorkbench.app */;
@@ -306,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695E3D20BF71B421E93FE9CE /* testButtonGallerySnapshot.1.png in Resources */,
 				BE8A5B8BD212951348F7DFD7 /* testCatalogSnapshot.1.png in Resources */,
 				881FE49B1D12761B75A3E112 /* testTextRoleGallerySnapshot.1.png in Resources */,
 				FF785AD6ACBD31DCE2D5ACFC /* typography-projection.integration.test.ts in Resources */,
@@ -327,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E630F00C1A36399364895B40 /* ButtonExamples.swift in Sources */,
 				9AFAE87DDA7BF681D36513C9 /* CatalogAvailabilityView.swift in Sources */,
 				3D54FDFA301363E99D76123C /* ComponentCatalogView.swift in Sources */,
 				4707DEBA55FAD496593A2C68 /* ComponentExample.swift in Sources */,
@@ -340,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02B93CCF726072584B74EF7 /* DesignSystemButtonTests.swift in Sources */,
 				59CD1C771E87E6B4064FC7E6 /* DesignSystemTextTests.swift in Sources */,
 				711653AE8D3C1FEC96292597 /* TextTokenIntegrationTests.swift in Sources */,
 				E9A313771EA09C94E7E919AF /* TokenTypographyTests.swift in Sources */,
@@ -369,6 +384,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4959LNU8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -376,6 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.designsystem.workbench;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -388,6 +406,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4959LNU8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +415,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.designsystem.workbench;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -406,12 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.designsystem.workbench.uitests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -424,12 +447,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.designsystem.workbench.uitests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -561,12 +586,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.designsystem.workbench.tests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -579,12 +606,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.designsystem.workbench.tests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -657,6 +686,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B3059EDE44258BAEFCE79145 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		88751F8A028D3A88C3F74F4C /* DesignSystemIcons */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystemIcons;
 		};
 		A7B5E2006735732226898A01 /* DesignSystemComponents */ = {
 			isa = XCSwiftPackageProductDependency;

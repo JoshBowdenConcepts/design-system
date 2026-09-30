@@ -22,7 +22,7 @@
     "generate": "tsx src/generate.ts",
     "test": "vitest run",
     "lint": "eslint src",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.types-tests.json --noEmit"
   },
   "dependencies": {
     "@design-system/icons": "workspace:*",

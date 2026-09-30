@@ -1,0 +1,119 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: var(--ds-space-300);
+  min-width: var(--ds-space-300);
+  gap: var(--ds-space-50);
+  border: 1px solid transparent;
+  border-radius: var(--ds-radius-200);
+  outline: none;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: var(--ds-layout-focus-ring-width) solid var(--ds-color-focus-ring);
+  outline-offset: var(--ds-layout-focus-ring-offset);
+}
+
+.size-sm {
+  padding: var(--ds-space-50) var(--ds-space-150);
+}
+
+.size-md {
+  padding: var(--ds-space-100) var(--ds-space-200);
+}
+
+.icon-only.size-sm {
+  padding: var(--ds-space-50);
+}
+
+.icon-only.size-md {
+  padding: var(--ds-space-100);
+}
+
+.variant-solid {
+  background: var(--ds-color-primary);
+  color: var(--ds-color-on-primary);
+}
+
+.variant-solid:hover:not(:disabled) {
+  background: var(--ds-color-primary-hover);
+}
+
+.variant-solid:active:not(:disabled) {
+  background: var(--ds-color-text-primary);
+  color: var(--ds-color-bg-raised);
+}
+
+.variant-solid:disabled {
+  background: var(--ds-color-bg-sunken);
+  color: var(--ds-color-text-tertiary);
+}
+
+.variant-outline {
+  background: transparent;
+  color: var(--ds-color-primary);
+  border-color: var(--ds-color-primary);
+}
+
+.variant-outline:hover:not(:disabled) {
+  background: var(--ds-color-bg-sunken);
+}
+
+.variant-outline:active:not(:disabled) {
+  background: var(--ds-color-primary-subtle);
+  border-color: var(--ds-color-primary-hover);
+  color: var(--ds-color-primary-hover);
+}
+
+.variant-outline:disabled {
+  color: var(--ds-color-text-tertiary);
+  border-color: var(--ds-color-border);
+}
+
+.variant-text {
+  background: transparent;
+  color: var(--ds-color-primary);
+}
+
+.variant-text:hover:not(:disabled) {
+  background: var(--ds-color-bg-sunken);
+}
+
+.variant-text:active:not(:disabled) {
+  background: var(--ds-color-primary-subtle);
+  color: var(--ds-color-primary-hover);
+}
+
+.variant-text:disabled {
+  color: var(--ds-color-text-tertiary);
+}
+
+.full-width {
+  display: flex;
+  width: 100%;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-space-between {
+  justify-content: space-between;
+}
+
+.icon-leading,
+.icon-trailing {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

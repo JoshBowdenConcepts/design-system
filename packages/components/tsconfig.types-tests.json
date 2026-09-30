@@ -5,6 +5,11 @@
     "rootDir": ".",
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "tests/Text.types.tsx"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tests/Text.types.tsx",
+    "tests/Button.types.tsx"
+  ],
   "exclude": ["src/generate.ts"]
 }

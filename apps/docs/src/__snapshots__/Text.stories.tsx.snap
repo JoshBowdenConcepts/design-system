@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Text Default smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <p class="_default-p_u87n9_1">
+    The quick brown fox jumps over the lazy dog.
+  </p>
+</div>
+`;
+
+exports[`Components/Text LabelExample smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <label for="email"
+         class="_default-label_u87n9_29 _variant-label_u87n9_66"
+  >
+    Email address
+  </label>
+</div>
+`;
+
+exports[`Components/Text SemanticHeading smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <h2 class="_default-h2_u87n9_17 _variant-h2_u87n9_46">
+    Section heading
+  </h2>
+</div>
+`;
+
+exports[`Components/Text VariantOverride smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <p class="_default-p_u87n9_1 _variant-p-sm_u87n9_62">
+    Paragraph default variant
+  </p>
+  <h3 class="_default-h3_u87n9_21 _variant-display_u87n9_38">
+    Display variant on a heading
+  </h3>
+</div>
+`;

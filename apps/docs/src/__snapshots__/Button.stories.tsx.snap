@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Button AppearancesAndSizes smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="display: flex; flex-direction: column; gap: var(--ds-space-200);">
+    <div style="display: flex; gap: var(--ds-space-200); align-items: center;">
+      <button type="button"
+              class="_button_q0t91_1 _variant-solid_q0t91_43 _size-sm_q0t91_27"
+      >
+        <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+          Button text
+        </span>
+      </button>
+      <button type="button"
+              class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+      >
+        <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+          Button text
+        </span>
+      </button>
+    </div>
+    <div style="display: flex; gap: var(--ds-space-200); align-items: center;">
+      <button type="button"
+              class="_button_q0t91_1 _variant-outline_q0t91_62 _size-sm_q0t91_27"
+      >
+        <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+          Button text
+        </span>
+      </button>
+      <button type="button"
+              class="_button_q0t91_1 _variant-outline_q0t91_62 _size-md_q0t91_31"
+      >
+        <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+          Button text
+        </span>
+      </button>
+    </div>
+    <div style="display: flex; gap: var(--ds-space-200); align-items: center;">
+      <button type="button"
+              class="_button_q0t91_1 _variant-text_q0t91_83 _size-sm_q0t91_27"
+      >
+        <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+          Button text
+        </span>
+      </button>
+      <button type="button"
+              class="_button_q0t91_1 _variant-text_q0t91_83 _size-md_q0t91_31"
+      >
+        <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+          Button text
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/Button Default smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button type="button"
+          class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Button Disabled smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button disabled
+          type="button"
+          class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Button FullWidth smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="width: 320px;">
+    <button type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31 _full-width_q0t91_101 _align-center_q0t91_106"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Button text
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Components/Button IconCombinations smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="display: flex; flex-direction: column; gap: var(--ds-space-200); align-items: flex-start;">
+    <button type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Neither
+      </span>
+    </button>
+    <button type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+    >
+      <span class="_icon-leading_q0t91_114">
+        <svg viewbox="0 0 24 24"
+             fill="currentColor"
+             width="1em"
+             height="1em"
+             aria-hidden="true"
+        >
+          <path d="M4 4h16v16H4z">
+          </path>
+        </svg>
+      </span>
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Leading only
+      </span>
+    </button>
+    <button type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Trailing only
+      </span>
+      <span class="_icon-trailing_q0t91_115">
+        <svg viewbox="0 0 24 24"
+             fill="currentColor"
+             width="1em"
+             height="1em"
+             aria-hidden="true"
+        >
+          <path d="M4 4h16v16H4z">
+          </path>
+        </svg>
+      </span>
+    </button>
+    <button type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+    >
+      <span class="_icon-leading_q0t91_114">
+        <svg viewbox="0 0 24 24"
+             fill="currentColor"
+             width="1em"
+             height="1em"
+             aria-hidden="true"
+        >
+          <path d="M4 4h16v16H4z">
+          </path>
+        </svg>
+      </span>
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Both
+      </span>
+      <span class="_icon-trailing_q0t91_115">
+        <svg viewbox="0 0 24 24"
+             fill="currentColor"
+             width="1em"
+             height="1em"
+             aria-hidden="true"
+        >
+          <path d="M4 4h16v16H4z">
+          </path>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Components/Button IconOnly smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="display: flex; gap: var(--ds-space-200); align-items: center;">
+    <button aria-label="Add item"
+            type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-sm_q0t91_27 _icon-only_q0t91_35"
+    >
+      <span class="_icon-leading_q0t91_114">
+        <svg viewbox="0 0 24 24"
+             fill="currentColor"
+             width="1em"
+             height="1em"
+             aria-hidden="true"
+        >
+          <path d="M4 4h16v16H4z">
+          </path>
+        </svg>
+      </span>
+    </button>
+    <button aria-label="Add item"
+            type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31 _icon-only_q0t91_35"
+    >
+      <span class="_icon-leading_q0t91_114">
+        <svg viewbox="0 0 24 24"
+             fill="currentColor"
+             width="1em"
+             height="1em"
+             aria-hidden="true"
+        >
+          <path d="M4 4h16v16H4z">
+          </path>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Components/Button InsideAForm smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <form style="display: flex; gap: var(--ds-space-200);">
+    <button type="button"
+            class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Default (no submit)
+      </span>
+    </button>
+    <button type="submit"
+            class="_button_q0t91_1 _variant-outline_q0t91_62 _size-md_q0t91_31"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Submit
+      </span>
+    </button>
+    <button type="reset"
+            class="_button_q0t91_1 _variant-text_q0t91_83 _size-md_q0t91_31"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Reset
+      </span>
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Components/Button LeadingIcon smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button type="button"
+          class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+  >
+    <span class="_icon-leading_q0t91_114">
+      <svg viewbox="0 0 24 24"
+           fill="currentColor"
+           width="1em"
+           height="1em"
+           aria-hidden="true"
+      >
+        <path d="M4 4h16v16H4z">
+        </path>
+      </svg>
+    </span>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Button Outline smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button type="button"
+          class="_button_q0t91_1 _variant-outline_q0t91_62 _size-md_q0t91_31"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Button Small smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button type="button"
+          class="_button_q0t91_1 _variant-solid_q0t91_43 _size-sm_q0t91_27"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Button TextAppearance smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button type="button"
+          class="_button_q0t91_1 _variant-text_q0t91_83 _size-md_q0t91_31"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Components/Button TrailingIcon smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <button type="button"
+          class="_button_q0t91_1 _variant-solid_q0t91_43 _size-md_q0t91_31"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Button text
+    </span>
+    <span class="_icon-trailing_q0t91_115">
+      <svg viewbox="0 0 24 24"
+           fill="currentColor"
+           width="1em"
+           height="1em"
+           aria-hidden="true"
+      >
+        <path d="M4 4h16v16H4z">
+        </path>
+      </svg>
+    </span>
+  </button>
+</div>
+`;

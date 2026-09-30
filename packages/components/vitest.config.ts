@@ -4,7 +4,8 @@ export default defineConfig({
   esbuild: { jsx: "automatic" },
   test: {
     name: "components",
-    environment: "node",
+    environment: "jsdom",
     include: ["tests/**/*.test.{ts,tsx}"],
+    setupFiles: ["./tests/setup.ts"],
   },
 });
