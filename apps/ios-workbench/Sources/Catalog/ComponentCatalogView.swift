@@ -10,24 +10,26 @@ struct ComponentCatalogView: View {
                     CatalogAvailabilityView(message: "No component examples are available.")
                 } else {
                     List {
-                        Section("Text") {
+                        Section("Components") {
                             ForEach(ComponentCatalog.validatedExamples) { example in
-                                NavigationLink(destination: ComponentExampleDetailView(example: example)) {
+                                NavigationLink(destination: gallery(for: example)) {
                                     Text(example.title)
                                 }
                                 .accessibilityIdentifier("catalog-\(example.id)")
                             }
                         }
-                        Section("Components") {
-                            NavigationLink(destination: ButtonGalleryView()) {
-                                Text("Button")
-                            }
-                            .accessibilityIdentifier("catalog-components.button")
-                        }
                     }
                 }
             }
             .navigationTitle("Components")
+        }
+    }
+
+    @ViewBuilder
+    private func gallery(for example: ComponentExample) -> some View {
+        switch example.component {
+        case .button: ButtonGalleryView()
+        case .text: TextGalleryView()
         }
     }
 }

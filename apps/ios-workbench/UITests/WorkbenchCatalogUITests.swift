@@ -1,21 +1,38 @@
 import XCTest
 
 final class WorkbenchCatalogUITests: XCTestCase {
-    func testCatalogOpensExampleAndPreviewUpdates() {
+    func testCatalogOpensTextAndPreviewUpdates() {
         let app = XCUIApplication()
         app.launch()
         XCTAssertTrue(app.navigationBars["Components"].waitForExistence(timeout: 10))
-        let example = app.descendants(matching: .any)["catalog-components.text.display"]
-        XCTAssertTrue(example.waitForExistence(timeout: 5), app.debugDescription)
-        example.tap()
+        let textRow = app.descendants(matching: .any)["catalog-components.text"]
+        XCTAssertTrue(textRow.waitForExistence(timeout: 5), app.debugDescription)
+        textRow.tap()
 
-        let field = app.textFields["example-content"]
+        let field = app.textFields["playground-content"]
         XCTAssertTrue(field.waitForExistence(timeout: 5))
         field.tap()
         field.press(forDuration: 1.1)
         app.menuItems["Select All"].tap()
         field.typeText("Updated preview")
-        XCTAssertTrue(app.staticTexts["Updated preview"].exists)
+        XCTAssertTrue(app.staticTexts["Updated preview"].firstMatch.exists)
+    }
+
+    func testTextPlaygroundRolePickerChangesThePreview() {
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.navigationBars["Components"].waitForExistence(timeout: 10))
+        let textRow = app.descendants(matching: .any)["catalog-components.text"]
+        XCTAssertTrue(textRow.waitForExistence(timeout: 5), app.debugDescription)
+        textRow.tap()
+
+        let preview = app.staticTexts["text-playground-preview"]
+        XCTAssertTrue(preview.waitForExistence(timeout: 5))
+        let paragraphHeight = preview.frame.height
+
+        app.buttons["playground-role"].tap()
+        app.buttons["display"].tap()
+        XCTAssertGreaterThan(preview.frame.height, paragraphHeight)
     }
 
     func testPlaygroundFullWidthToggleWidensThePreviewButton() {

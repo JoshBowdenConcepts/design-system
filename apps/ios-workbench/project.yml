@@ -2,6 +2,14 @@ name: iOSComponentWorkbench
 options:
   deploymentTarget:
     iOS: "15.0"
+# Signing applies to every target so a regenerated project is runnable on a
+# device without reconfiguring Signing & Capabilities by hand each time —
+# XcodeGen rewrites the .xcodeproj from this spec, so anything set in Xcode's
+# UI is lost on the next `pnpm ios:workbench`.
+settings:
+  base:
+    DEVELOPMENT_TEAM: R4959LNU8F
+    CODE_SIGN_STYLE: Automatic
 packages:
   design-system:
     path: ../..

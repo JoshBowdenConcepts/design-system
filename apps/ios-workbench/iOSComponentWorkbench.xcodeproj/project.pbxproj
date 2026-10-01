@@ -10,18 +10,17 @@
 		0D7B304994A7710375B8715E /* WorkbenchSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D4B841A90A4B4C7396941 /* WorkbenchSnapshotTests.swift */; };
 		23E17D11662F08773077C2DE /* DesignSystemTokens in Frameworks */ = {isa = PBXBuildFile; productRef = AF85CE2D943DF34DA3D5D0D6 /* DesignSystemTokens */; };
 		306629E4978562A122DE8DF6 /* DesignSystemIcons in Frameworks */ = {isa = PBXBuildFile; productRef = 88751F8A028D3A88C3F74F4C /* DesignSystemIcons */; };
-		34B79E25827DA43215B1F71B /* TextRoleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4DADCC0446B149E1CE489C /* TextRoleGalleryView.swift */; };
 		3B94E0E9543C17CD3AC7D416 /* DesignSystemComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A7B5E2006735732226898A01 /* DesignSystemComponents */; };
 		3D54FDFA301363E99D76123C /* ComponentCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */; };
 		4707DEBA55FAD496593A2C68 /* ComponentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */; };
+		57DF89B36163045C82829E6A /* TextExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD75B66B05B7BC6C7B6050DC /* TextExamples.swift */; };
 		59CD1C771E87E6B4064FC7E6 /* DesignSystemTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */; };
 		695E3D20BF71B421E93FE9CE /* testButtonGallerySnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */; };
 		711653AE8D3C1FEC96292597 /* TextTokenIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */; };
 		76DD4692427DEC6BB432BE9A /* DesignSystemTokens in Frameworks */ = {isa = PBXBuildFile; productRef = D28592CAB7BF8B255F5F075F /* DesignSystemTokens */; };
 		788760503035449FA205BDFC /* WorkbenchCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48295E53AE3686655476B29 /* WorkbenchCatalogUITests.swift */; };
-		881FE49B1D12761B75A3E112 /* testTextRoleGallerySnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F3B676C4F7A1E8B056EA3 /* testTextRoleGallerySnapshot.1.png */; };
 		9AFAE87DDA7BF681D36513C9 /* CatalogAvailabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73CD0208F22D6866040BC4 /* CatalogAvailabilityView.swift */; };
-		AE4FB3CF8B29FE7F4D725F3C /* ComponentExampleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC383DBB046B0BA1F770A7C0 /* ComponentExampleDetailView.swift */; };
+		AF49E5E579BABEC1AE136BD2 /* testTextGallerySnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = B45860AC718EA48F7109D18A /* testTextGallerySnapshot.1.png */; };
 		BE8A5B8BD212951348F7DFD7 /* testCatalogSnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */; };
 		C02B93CCF726072584B74EF7 /* DesignSystemButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */; };
 		DCBD8E50379192572AC581A0 /* WorkbenchCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADC332EC64703C58175C5A /* WorkbenchCatalogTests.swift */; };
@@ -61,14 +60,13 @@
 		5FDD710EDF45BA645E0CEB9E /* TokenTypographyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTypographyTests.swift; sourceTree = "<group>"; };
 		709FF1A5F6ADD788D2F0C6DB /* iOSComponentWorkbenchTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = iOSComponentWorkbenchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8925DEC81B9D80E14195D921 /* iOSComponentWorkbenchUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = iOSComponentWorkbenchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A335C15378BB8250099EDCD2 /* iOSComponentWorkbench.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSComponentWorkbench.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A335C15378BB8250099EDCD2 /* iOSComponentWorkbench.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = iOSComponentWorkbench.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48295E53AE3686655476B29 /* WorkbenchCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchCatalogUITests.swift; sourceTree = "<group>"; };
-		A61A4B8ECB9EE8F84CCF4812 /* typography-projection.integration.test.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = "typography-projection.integration.test.ts"; sourceTree = "<group>"; };
-		B87F3B676C4F7A1E8B056EA3 /* testTextRoleGallerySnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testTextRoleGallerySnapshot.1.png; sourceTree = "<group>"; };
+		A61A4B8ECB9EE8F84CCF4812 /* typography-projection.integration.test.ts */ = {isa = PBXFileReference; path = "typography-projection.integration.test.ts"; sourceTree = "<group>"; };
+		B45860AC718EA48F7109D18A /* testTextGallerySnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testTextGallerySnapshot.1.png; sourceTree = "<group>"; };
 		B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExample.swift; sourceTree = "<group>"; };
-		BA4DADCC0446B149E1CE489C /* TextRoleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRoleGalleryView.swift; sourceTree = "<group>"; };
+		BD75B66B05B7BC6C7B6050DC /* TextExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExamples.swift; sourceTree = "<group>"; };
 		C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemButtonTests.swift; sourceTree = "<group>"; };
-		DC383DBB046B0BA1F770A7C0 /* ComponentExampleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExampleDetailView.swift; sourceTree = "<group>"; };
 		DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTokenIntegrationTests.swift; sourceTree = "<group>"; };
 		F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTextTests.swift; sourceTree = "<group>"; };
 		F56D4B841A90A4B4C7396941 /* WorkbenchSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchSnapshotTests.swift; sourceTree = "<group>"; };
@@ -149,7 +147,7 @@
 			children = (
 				523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */,
 				1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */,
-				B87F3B676C4F7A1E8B056EA3 /* testTextRoleGallerySnapshot.1.png */,
+				B45860AC718EA48F7109D18A /* testTextGallerySnapshot.1.png */,
 			);
 			path = WorkbenchSnapshotTests;
 			sourceTree = "<group>";
@@ -182,8 +180,7 @@
 				FF73CD0208F22D6866040BC4 /* CatalogAvailabilityView.swift */,
 				297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */,
 				B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */,
-				DC383DBB046B0BA1F770A7C0 /* ComponentExampleDetailView.swift */,
-				BA4DADCC0446B149E1CE489C /* TextRoleGalleryView.swift */,
+				BD75B66B05B7BC6C7B6050DC /* TextExamples.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -283,7 +280,17 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					18DA2AFC8E82E24687A4D03F = {
+						DevelopmentTeam = R4959LNU8F;
+						ProvisioningStyle = Automatic;
+					};
+					7A1B77ED56A286D7439F1DE3 = {
+						DevelopmentTeam = R4959LNU8F;
+						ProvisioningStyle = Automatic;
+					};
 					F6A5FD6FA1CE60FC5A2832D2 = {
+						DevelopmentTeam = R4959LNU8F;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 7A1B77ED56A286D7439F1DE3;
 					};
 				};
@@ -320,7 +327,7 @@
 			files = (
 				695E3D20BF71B421E93FE9CE /* testButtonGallerySnapshot.1.png in Resources */,
 				BE8A5B8BD212951348F7DFD7 /* testCatalogSnapshot.1.png in Resources */,
-				881FE49B1D12761B75A3E112 /* testTextRoleGallerySnapshot.1.png in Resources */,
+				AF49E5E579BABEC1AE136BD2 /* testTextGallerySnapshot.1.png in Resources */,
 				FF785AD6ACBD31DCE2D5ACFC /* typography-projection.integration.test.ts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,8 +351,7 @@
 				9AFAE87DDA7BF681D36513C9 /* CatalogAvailabilityView.swift in Sources */,
 				3D54FDFA301363E99D76123C /* ComponentCatalogView.swift in Sources */,
 				4707DEBA55FAD496593A2C68 /* ComponentExample.swift in Sources */,
-				AE4FB3CF8B29FE7F4D725F3C /* ComponentExampleDetailView.swift in Sources */,
-				34B79E25827DA43215B1F71B /* TextRoleGalleryView.swift in Sources */,
+				57DF89B36163045C82829E6A /* TextExamples.swift in Sources */,
 				FC31BF6FF13B529CC103CC01 /* WorkbenchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +391,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R4959LNU8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,7 +412,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R4959LNU8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -496,8 +500,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = R4959LNU8F;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -552,8 +558,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = R4959LNU8F;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

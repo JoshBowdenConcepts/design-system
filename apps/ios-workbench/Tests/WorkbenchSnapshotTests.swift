@@ -9,23 +9,25 @@ final class WorkbenchSnapshotTests: XCTestCase {
         assertSnapshot(of: view, as: .image(on: .iPhoneSe(.portrait)))
     }
 
-    func testTextRoleGallerySnapshot() {
-        let view = UIHostingController(rootView: TextRoleGalleryView())
-        assertSnapshot(of: view, as: .image(on: .iPhoneSe(.portrait)))
+    func testTextGallerySnapshot() {
+        let view = UIHostingController(rootView: TextGalleryView())
+        assertSnapshot(of: view, as: .image(on: Self.tallPortrait(height: 1200)))
     }
 
     func testButtonGallerySnapshot() {
-        // The gallery's content is taller than one phone screen; a device
-        // preset would silently clip everything below the fold (the exact
-        // full-width and icon-only rows this snapshot exists to catch). A
-        // custom, generously tall config captures the whole scrollable
-        // content instead.
-        let tallPortrait = ViewImageConfig(
+        let view = UIHostingController(rootView: ButtonGalleryView())
+        assertSnapshot(of: view, as: .image(on: Self.tallPortrait(height: 2200)))
+    }
+
+    /// The galleries are taller than one phone screen; a device preset would
+    /// silently clip everything below the fold (the exact full-width, icon-only
+    /// and smaller-role rows these snapshots exist to catch). A custom,
+    /// generously tall config captures the whole scrollable content instead.
+    private static func tallPortrait(height: CGFloat) -> ViewImageConfig {
+        ViewImageConfig(
             safeArea: .zero,
-            size: CGSize(width: 375, height: 2200),
+            size: CGSize(width: 375, height: height),
             traits: ViewImageConfig.iPhoneSe(.portrait).traits
         )
-        let view = UIHostingController(rootView: ButtonGalleryView())
-        assertSnapshot(of: view, as: .image(on: tallPortrait))
     }
 }
