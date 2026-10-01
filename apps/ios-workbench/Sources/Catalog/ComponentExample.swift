@@ -7,6 +7,7 @@ import SwiftUI
 struct ComponentExample: Identifiable {
     enum Component {
         case button
+        case link
         case text
     }
 
@@ -18,6 +19,7 @@ struct ComponentExample: Identifiable {
 enum ComponentCatalog {
     static let examples = [
         ComponentExample(id: "components.button", title: "Button", component: .button),
+        ComponentExample(id: "components.link", title: "Link", component: .link),
         ComponentExample(id: "components.text", title: "Text", component: .text),
     ]
 

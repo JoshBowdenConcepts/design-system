@@ -29,6 +29,7 @@ struct ComponentCatalogView: View {
     private func gallery(for example: ComponentExample) -> some View {
         switch example.component {
         case .button: ButtonGalleryView()
+        case .link: LinkGalleryView()
         case .text: TextGalleryView()
         }
     }

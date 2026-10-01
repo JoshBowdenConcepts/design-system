@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Link AllStatesAtEachSize smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="display: grid; grid-template-columns: 120px max-content max-content; gap: var(--ds-space-300) var(--ds-space-600); align-items: center;">
+    <div>
+    </div>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66"
+          style="color: var(--ds-color-text-secondary);"
+    >
+      Small
+    </span>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66"
+          style="color: var(--ds-color-text-secondary);"
+    >
+      Medium
+    </span>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Default
+    </span>
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Link text
+      </span>
+    </a>
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-p_u87n9_58">
+        Link text
+      </span>
+    </a>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      External
+    </span>
+    <a href="#"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Link text
+      </span>
+      <span aria-hidden="true"
+            class="_external-indicator_1l1qw_32"
+      >
+        ↗
+      </span>
+      <span class="_visually-hidden_1l1qw_38">
+        (opens in a new tab)
+      </span>
+    </a>
+    <a href="#"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-p_u87n9_58">
+        Link text
+      </span>
+      <span aria-hidden="true"
+            class="_external-indicator_1l1qw_32"
+      >
+        ↗
+      </span>
+      <span class="_visually-hidden_1l1qw_38">
+        (opens in a new tab)
+      </span>
+    </a>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Unavailable
+    </span>
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66 _unavailable_1l1qw_59">
+      Link text
+    </span>
+    <span class="_default-span_u87n9_5 _variant-p_u87n9_58 _unavailable_1l1qw_59">
+      Link text
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Components/Link Default smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <a href="#"
+     class="_link_1l1qw_1"
+  >
+    <span class="_default-span_u87n9_5">
+      Link text
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Components/Link External smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <a href="#"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="_link_1l1qw_1"
+  >
+    <span class="_default-span_u87n9_5">
+      Status page
+    </span>
+    <span aria-hidden="true"
+          class="_external-indicator_1l1qw_32"
+    >
+      ↗
+    </span>
+    <span class="_visually-hidden_1l1qw_38">
+      (opens in a new tab)
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Components/Link InlineInParagraph smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <p class="_default-p_u87n9_1 _variant-p_u87n9_58"
+     style="max-width: var(--ds-layout-measure);"
+  >
+    Links inside running text inherit the paragraph style and are always underlined, so they never rely on color alone. Read the
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5">
+        accessibility guide
+      </span>
+    </a>
+    before shipping.
+  </p>
+</div>
+`;
+
+exports[`Components/Link InlineInSmallParagraph smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <p class="_default-p_u87n9_1 _variant-p-sm_u87n9_62"
+     style="max-width: var(--ds-layout-measure); color: var(--ds-color-text-secondary);"
+  >
+    Smaller copy works the same way. See the
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5">
+        release notes
+      </span>
+    </a>
+    for details.
+  </p>
+</div>
+`;
+
+exports[`Components/Link Sizes smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <div style="display: flex; flex-direction: column; gap: var(--ds-space-200); align-items: flex-start;">
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5">
+        Inherit (default — matches this paragraph's ambient size)
+      </span>
+    </a>
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-p_u87n9_58">
+        Link text (p)
+      </span>
+    </a>
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-p-sm_u87n9_62">
+        Link text (p-sm)
+      </span>
+    </a>
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+        Link text (label)
+      </span>
+    </a>
+    <a href="#"
+       class="_link_1l1qw_1"
+    >
+      <span class="_default-span_u87n9_5 _variant-caption_u87n9_70">
+        Link text (caption)
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Components/Link Standalone smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <a href="#"
+     class="_link_1l1qw_1 _standalone_1l1qw_22"
+  >
+    <span class="_default-span_u87n9_5 _variant-label_u87n9_66">
+      Link text
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Components/Link Unavailable smoke-test 1`] = `
+<div style="background: var(--ds-color-bg); color: var(--ds-color-text-primary); font: var(--ds-type-p); padding: 1.5rem; min-height: 100vh;">
+  <span class="_default-span_u87n9_5 _unavailable_1l1qw_59">
+    Link text
+  </span>
+</div>
+`;

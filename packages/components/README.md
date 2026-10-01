@@ -2,7 +2,7 @@
 
 Part of the [design system](../../README.md) monorepo. This package contains the
 public web components used by the design system, including the polymorphic
-`Text` primitive and the `Button` action control.
+`Text` primitive, the `Button` action control, and the `Link` navigation control.
 
 ## Public entry point
 
@@ -10,9 +10,9 @@ public web components used by the design system, including the polymorphic
   via the `exports` field in `package.json`.
 - **iOS:** the `DesignSystemComponents` SwiftPM target in the repo-root `Package.swift`,
   generated into `dist/ios/DesignSystemComponents/`.
-- **CSS Modules:** `Text.module.css` and `Button.module.css` are copied into `dist/web`
-  during the package build so the published components can resolve their
-  token-based local styles.
+- **CSS Modules:** `Text.module.css`, `Button.module.css`, and `Link.module.css` are
+  copied into `dist/web` during the package build so the published components can
+  resolve their token-based local styles.
 
 ## Text component
 
@@ -73,6 +73,49 @@ overload omitting the accessibility label, enforcing the same non-empty-name
 requirement as the type-level web contract. Authored Swift sources live in
 `src/ios/` and are copied into generated `dist/ios/` output during the
 package build.
+
+## Link component
+
+Built directly on `Text` — `Link` has no typography of its own. Omitting `size`
+inherits the surrounding text's size (`Text`'s `as="span"` default,
+`font: inherit`); the explicit sizes are `p`, `p-sm`, `label`, and `caption`.
+Heading and display sizes are not members of the `size` type, so passing one
+fails `tsc`, matching the approved Claude Design Link reference (see
+`specs/006-link-component/`). `caption` is required ahead of that reference per
+an accepted spec clarification.
+
+```tsx
+import { Link } from "@design-system/components";
+
+{/* Inline: inherits the surrounding paragraph's size, always underlined */}
+<Text as="p">Read the <Link href="/docs">docs</Link> before shipping.</Text>
+
+{/* Standalone: meets the 24×24 minimum interactive target */}
+<Link href="/projects" standalone size="label">View all projects</Link>
+
+{/* External: hidden-from-AT indicator + new-context statement in the accessible name + safe navigation */}
+<Link href="https://example.com" external>Status page</Link>
+
+{/* Unavailable: omit href — never a disabled prop. Renders de-emphasized,
+    non-interactive text with no link role and no Tab-order presence. */}
+<Link>Link text</Link>
+```
+
+There is no `disabled` option — a Link's destination is either present
+(same-context or `external`) or absent, and an absent destination always
+renders the de-emphasized, non-interactive presentation. `target`/`rel` are not
+accepted props; the component manages them itself (`target="_blank"
+rel="noopener noreferrer"`) whenever `external` is `true`, so the safety
+guarantee cannot be weakened by a passthrough prop.
+
+The iOS `DesignSystemLink` mirrors the same `size`/`standalone`/`external`
+options and the same destination-presence rule (`destination: URL?`) as a
+native SwiftUI view. It is built on a `Button` + `@Environment(\.openURL)`
+action rather than SwiftUI's native `Link` view, because `Link` offers no
+pressed-state styling hook; `.accessibilityAddTraits(.isLink)` /
+`.accessibilityRemoveTraits(.isButton)` correct the exposed semantics back to
+a link. Authored Swift sources live in `src/ios/` and are copied into
+generated `dist/ios/` output during the package build.
 
 ## Commands
 

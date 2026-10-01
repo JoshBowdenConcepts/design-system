@@ -1,0 +1,61 @@
+.link {
+  color: var(--ds-color-primary);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  border-radius: var(--ds-radius-100);
+  outline: none;
+  transition: color 120ms ease;
+}
+
+.link:hover {
+  color: var(--ds-color-primary-hover);
+  text-decoration-thickness: 2px;
+}
+
+.link:focus-visible {
+  outline: var(--ds-layout-focus-ring-width) solid var(--ds-color-focus-ring);
+  outline-offset: var(--ds-layout-focus-ring-offset);
+}
+
+/* Standalone meets the 24×24 minimum interactive target (2.5.8). Inline
+   (the default — no `.standalone` class) stays plain inline content so it
+   never disturbs the line metrics of surrounding running text. */
+.standalone {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--ds-space-300);
+  min-width: var(--ds-space-300);
+}
+
+.external-indicator {
+  display: inline-block;
+  font: var(--ds-type-label);
+  margin-left: var(--ds-space-50);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* No destination (FR-013): de-emphasized, non-interactive text — never a
+   disabled-looking but still focusable/announced link.
+   `--ds-color-text-tertiary` (the reference's literal token) only reaches
+   ~4.29:1 against `--ds-color-bg` in light mode — below the 4.5:1 AA floor
+   (1.4.3) for normal text. Unlike Button's *disabled* state, unavailable Link
+   text is not an inactive UI component exempt from that rule — it is static
+   content a user reads — so `--ds-color-text-secondary` is used instead
+   (9.76:1 light / 10.84:1 dark), which stays visually de-emphasized relative
+   to active body text while passing AA. See design-reference.md. */
+.unavailable {
+  color: var(--ds-color-text-secondary);
+}

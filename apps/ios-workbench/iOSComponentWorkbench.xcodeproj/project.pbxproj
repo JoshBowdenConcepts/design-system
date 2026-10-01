@@ -13,8 +13,10 @@
 		3B94E0E9543C17CD3AC7D416 /* DesignSystemComponents in Frameworks */ = {isa = PBXBuildFile; productRef = A7B5E2006735732226898A01 /* DesignSystemComponents */; };
 		3D54FDFA301363E99D76123C /* ComponentCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */; };
 		4707DEBA55FAD496593A2C68 /* ComponentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */; };
+		518BABE7DDF1937921E40577 /* DesignSystemLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91549BA991E4D0F406BC2F /* DesignSystemLinkTests.swift */; };
 		57DF89B36163045C82829E6A /* TextExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD75B66B05B7BC6C7B6050DC /* TextExamples.swift */; };
 		59CD1C771E87E6B4064FC7E6 /* DesignSystemTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */; };
+		64D558EDF5620B2F974AC5D9 /* testLinkGallerySnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D50978126BDF006A2ED02D /* testLinkGallerySnapshot.1.png */; };
 		695E3D20BF71B421E93FE9CE /* testButtonGallerySnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */; };
 		711653AE8D3C1FEC96292597 /* TextTokenIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */; };
 		76DD4692427DEC6BB432BE9A /* DesignSystemTokens in Frameworks */ = {isa = PBXBuildFile; productRef = D28592CAB7BF8B255F5F075F /* DesignSystemTokens */; };
@@ -24,6 +26,7 @@
 		BE8A5B8BD212951348F7DFD7 /* testCatalogSnapshot.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */; };
 		C02B93CCF726072584B74EF7 /* DesignSystemButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */; };
 		DCBD8E50379192572AC581A0 /* WorkbenchCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADC332EC64703C58175C5A /* WorkbenchCatalogTests.swift */; };
+		DEC9FCBF1D10D2B51347FF81 /* LinkExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210860A9CC0BF26DEC02FCB6 /* LinkExamples.swift */; };
 		E1012120614C0B7DA2A0E988 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 85210D82564E710729025929 /* SnapshotTesting */; };
 		E630F00C1A36399364895B40 /* ButtonExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D10CB22655EADFD3BBB1F79 /* ButtonExamples.swift */; };
 		E9A313771EA09C94E7E919AF /* TokenTypographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD710EDF45BA645E0CEB9E /* TokenTypographyTests.swift */; };
@@ -52,7 +55,9 @@
 /* Begin PBXFileReference section */
 		0D10CB22655EADFD3BBB1F79 /* ButtonExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExamples.swift; sourceTree = "<group>"; };
 		11C530266616379C20919B2D /* design-system */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "design-system"; path = ../..; sourceTree = SOURCE_ROOT; };
+		18D50978126BDF006A2ED02D /* testLinkGallerySnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testLinkGallerySnapshot.1.png; sourceTree = "<group>"; };
 		1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCatalogSnapshot.1.png; sourceTree = "<group>"; };
+		210860A9CC0BF26DEC02FCB6 /* LinkExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExamples.swift; sourceTree = "<group>"; };
 		297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCatalogView.swift; sourceTree = "<group>"; };
 		33ADC332EC64703C58175C5A /* WorkbenchCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchCatalogTests.swift; sourceTree = "<group>"; };
 		35853D406BBF40E8FA31741D /* WorkbenchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchApp.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExample.swift; sourceTree = "<group>"; };
 		BD75B66B05B7BC6C7B6050DC /* TextExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExamples.swift; sourceTree = "<group>"; };
 		C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemButtonTests.swift; sourceTree = "<group>"; };
+		CA91549BA991E4D0F406BC2F /* DesignSystemLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemLinkTests.swift; sourceTree = "<group>"; };
 		DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTokenIntegrationTests.swift; sourceTree = "<group>"; };
 		F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTextTests.swift; sourceTree = "<group>"; };
 		F56D4B841A90A4B4C7396941 /* WorkbenchSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbenchSnapshotTests.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			children = (
 				523F17DBE662DA22F7E689A8 /* testButtonGallerySnapshot.1.png */,
 				1C6C1533F19CCE65B56C560C /* testCatalogSnapshot.1.png */,
+				18D50978126BDF006A2ED02D /* testLinkGallerySnapshot.1.png */,
 				B45860AC718EA48F7109D18A /* testTextGallerySnapshot.1.png */,
 			);
 			path = WorkbenchSnapshotTests;
@@ -180,6 +187,7 @@
 				FF73CD0208F22D6866040BC4 /* CatalogAvailabilityView.swift */,
 				297C4D643C82EB6413D74153 /* ComponentCatalogView.swift */,
 				B922CAF7D9EABC8D92F35382 /* ComponentExample.swift */,
+				210860A9CC0BF26DEC02FCB6 /* LinkExamples.swift */,
 				BD75B66B05B7BC6C7B6050DC /* TextExamples.swift */,
 			);
 			path = Catalog;
@@ -199,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				C1557DE8E3F3D924C7CCCA1A /* DesignSystemButtonTests.swift */,
+				CA91549BA991E4D0F406BC2F /* DesignSystemLinkTests.swift */,
 				F2E1B5B1E7A3DB924F64BCCC /* DesignSystemTextTests.swift */,
 				DFC298E7E207BE4A645E528F /* TextTokenIntegrationTests.swift */,
 			);
@@ -327,6 +336,7 @@
 			files = (
 				695E3D20BF71B421E93FE9CE /* testButtonGallerySnapshot.1.png in Resources */,
 				BE8A5B8BD212951348F7DFD7 /* testCatalogSnapshot.1.png in Resources */,
+				64D558EDF5620B2F974AC5D9 /* testLinkGallerySnapshot.1.png in Resources */,
 				AF49E5E579BABEC1AE136BD2 /* testTextGallerySnapshot.1.png in Resources */,
 				FF785AD6ACBD31DCE2D5ACFC /* typography-projection.integration.test.ts in Resources */,
 			);
@@ -351,6 +361,7 @@
 				9AFAE87DDA7BF681D36513C9 /* CatalogAvailabilityView.swift in Sources */,
 				3D54FDFA301363E99D76123C /* ComponentCatalogView.swift in Sources */,
 				4707DEBA55FAD496593A2C68 /* ComponentExample.swift in Sources */,
+				DEC9FCBF1D10D2B51347FF81 /* LinkExamples.swift in Sources */,
 				57DF89B36163045C82829E6A /* TextExamples.swift in Sources */,
 				FC31BF6FF13B529CC103CC01 /* WorkbenchApp.swift in Sources */,
 			);
@@ -361,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02B93CCF726072584B74EF7 /* DesignSystemButtonTests.swift in Sources */,
+				518BABE7DDF1937921E40577 /* DesignSystemLinkTests.swift in Sources */,
 				59CD1C771E87E6B4064FC7E6 /* DesignSystemTextTests.swift in Sources */,
 				711653AE8D3C1FEC96292597 /* TextTokenIntegrationTests.swift in Sources */,
 				E9A313771EA09C94E7E919AF /* TokenTypographyTests.swift in Sources */,

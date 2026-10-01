@@ -22,7 +22,7 @@ const pkgRoot = join(here, "..");
 const iosDir = join(pkgRoot, "dist", "ios", "DesignSystemComponents");
 const webDir = join(pkgRoot, "dist", "web");
 
-const COMPONENTS: string[] = ["Placeholder", "Text", "Button"];
+const COMPONENTS: string[] = ["Placeholder", "Text", "Button", "Link"];
 
 export function renderSwift(components: string[]): string {
   const names = components.map((c) => `    // ${c}`).join("\n");
@@ -57,6 +57,7 @@ export function generate(): void {
     join(here, "Button.module.css"),
     join(webDir, "Button.module.css"),
   );
+  copyFileSync(join(here, "Link.module.css"), join(webDir, "Link.module.css"));
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

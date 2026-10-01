@@ -19,6 +19,11 @@ final class WorkbenchSnapshotTests: XCTestCase {
         assertSnapshot(of: view, as: .image(on: Self.tallPortrait(height: 2200)))
     }
 
+    func testLinkGallerySnapshot() {
+        let view = UIHostingController(rootView: LinkGalleryView())
+        assertSnapshot(of: view, as: .image(on: Self.tallPortrait(height: 1800)))
+    }
+
     /// The galleries are taller than one phone screen; a device preset would
     /// silently clip everything below the fold (the exact full-width, icon-only
     /// and smaller-role rows these snapshots exist to catch). A custom,
