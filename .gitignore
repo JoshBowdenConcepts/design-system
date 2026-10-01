@@ -15,7 +15,8 @@ pnpm-debug.log*
 # Swift / SwiftPM
 .build/
 DerivedData/
-*.xcodeproj/xcuserdata/
+xcuserdata/
+*.xcuserstate
 
 # Playwright
 /test-results/
